@@ -1,0 +1,1162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <include>Control</include>
+        <variable constant="0" name="SampahDiKantong" sid="914331172542599" static="0" type="number">0</variable>
+        <variable constant="0" name="maxKantong" sid="608188261645627" static="0" type="number">3</variable>
+        <variable constant="0" name="sampahdidapat" sid="228811205432567" static="0" type="text"></variable>
+        <variable constant="0" name="isBuangSampah" sid="216125107295680" static="0" type="number">0</variable>
+        <variable constant="0" name="isStun" sid="990155868792107" static="0" type="number">0</variable>
+        <event-group description="" sid="778938068568531" title="Responsive">
+            <sub-events>
+                <event-block sid="913607359673559">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="776359606166566" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="803947355379479">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="572491237993916" type="ArrowButton">
+                                    <param id="0" name="Instance variable">arrow</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="154226792530556" type="ArrowButton">
+                                    <param id="0" name="X">ViewportLeft(&quot;UI&quot;) + 120</param>
+                                    <param id="1" name="Y">ViewportBottom(&quot;UI&quot;) - 100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="714622027738977">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="533383618325037" type="ArrowButton">
+                                    <param id="0" name="Instance variable">arrow</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="356632448228708" type="ArrowButton">
+                                    <param id="0" name="X">ViewportLeft(&quot;UI&quot;) + 250</param>
+                                    <param id="1" name="Y">ViewportBottom(&quot;UI&quot;) - 100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="574986444448422">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="398912608215788" type="ArrowButton">
+                                    <param id="0" name="Instance variable">arrow</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;jump&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="471584820750770" type="ArrowButton">
+                                    <param id="0" name="X">ViewportRight(&quot;UI&quot;) - 120</param>
+                                    <param id="1" name="Y">ViewportBottom(&quot;UI&quot;) - 100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="662205855372768">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="716616590561053" type="ArrowButton">
+                                    <param id="0" name="Instance variable">arrow</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;crouch&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="462935027767538" type="ArrowButton">
+                                    <param id="0" name="X">ViewportRight(&quot;UI&quot;) - 250</param>
+                                    <param id="1" name="Y">ViewportBottom(&quot;UI&quot;) - 100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Text Isi Kantong</comment>
+                <event-block sid="654849360154855">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="829291119299894" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="828359134443272" type="SampahDibawa">
+                            <param id="0" name="X">ViewportLeft(&quot;UI&quot;) + 40</param>
+                            <param id="1" name="Y">ViewportTop(&quot;UI&quot;) + 40</param>
+                        </action>
+                        <action id="0" name="Set text" sid="890751246969249" type="SampahDibawa">
+                            <param id="0" name="Text">SampahDiKantong</param>
+                        </action>
+                        <action id="1" name="Append text" sid="998648351572553" type="SampahDibawa">
+                            <param id="0" name="Text">&quot; / &quot;</param>
+                        </action>
+                        <action id="1" name="Append text" sid="169587797481236" type="SampahDibawa">
+                            <param id="0" name="Text">maxKantong</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Tempat Sampah</comment>
+                <event-block sid="881601815599317">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="672014721060158" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="688292854859623" type="ButtonTempatSampah">
+                            <param id="0" name="X">ViewportRight(&quot;UI&quot;) - 120</param>
+                            <param id="1" name="Y">ViewportBottom(&quot;UI&quot;) - 240</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="571813227805115" type="BGKantong">
+                            <param id="0" name="X">ViewportRight(&quot;Buang Sampah&quot;) / 2</param>
+                            <param id="1" name="Y">ViewportBottom(&quot;Buang Sampah&quot;) / 2 - 100</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="657928804405020" type="Sprite">
+                            <param id="0" name="Object">BGKantong</param>
+                            <param id="1" name="Image point (optional)">6</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="601974921609687" type="Sprite2">
+                            <param id="0" name="Object">BGKantong</param>
+                            <param id="1" name="Image point (optional)">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Tumpukan Sampah</comment>
+                <event-block sid="960282627170295">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="750436868546957" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="134338578278360" type="ProgressPlace">
+                            <param id="0" name="X">ViewportRight(&quot;UI&quot;) / 2</param>
+                            <param id="1" name="Y">ViewportBottom(&quot;UI&quot;) - 100</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="867654648106848" type="Progress">
+                            <param id="0" name="Object">ProgressPlace</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="299445156342414" type="TapTap">
+                            <param id="0" name="Object">ProgressPlace</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="252198532973402">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is touching object" sid="611242096829271" type="Touch">
+                            <param id="0" name="Object">TapTap</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="539190366320763" type="TapTap">
+                            <param id="0" name="Opacity">70</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="382337764424448">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="633179782399173" type="Touch">
+                            <param id="0" name="Object">TapTap</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="641109669349886" type="TapTap">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="861582437234009">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="347606666598755" type="chara" />
+                <condition id="-14" name="Compare variable" sid="340780719646418" type="System">
+                    <param id="0" name="Variable">isStun</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="317020470458634" type="chara">
+                    <param id="0" name="Animation">&quot;walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="263396382267933">
+            <conditions>
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="145631271918254" type="chara" />
+                <condition id="-14" name="Compare variable" sid="516340534688642" type="System">
+                    <param id="0" name="Variable">isStun</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="348199241812639" type="chara">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="551731355965966">
+            <conditions>
+                <condition behavior="Platform" id="5" name="On jump" sid="355447254087010" type="chara" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="594028877718068" type="chara">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Sampah</comment>
+        <event-block sid="974803866106144">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="487586311466707" type="sampah">
+                    <param id="0" name="Instance variable">jenis</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;anorganik&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="499681049749513" type="sampah">
+                    <param id="0" name="Animation">&quot;anorganik&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="233811659177825">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="778886946364671" type="sampah">
+                    <param id="0" name="Instance variable">jenis</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;organik&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="409768743804630" type="sampah">
+                    <param id="0" name="Animation">&quot;organik&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="151410649650174">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="260479256414895" type="chara">
+                    <param id="0" name="Object">sampah</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="173328239715478" type="System">
+                    <param id="0" name="Variable">maxKantong</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">SampahDiKantong</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="125592963364414" type="sampah" />
+                <action id="-10" name="Add to" sid="139810393725770" type="System">
+                    <param id="0" name="Variable">SampahDiKantong</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="953010790637324" type="System">
+                    <param id="0" name="Variable">sampahdidapat</param>
+                    <param id="1" name="Value">sampah.jenis</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="523762395599482">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="142102934015317" type="System">
+                            <param id="0" name="Variable">sampahke1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="357648807841349" type="System">
+                            <param id="0" name="Variable">sampahke1</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="908627796431597">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="827327428016357" type="System">
+                                    <param id="0" name="Variable">sampahdidapat</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;organik&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="319186379835283" type="BGKantong">
+                                    <param id="0" name="Object">ImgSampahBuang</param>
+                                    <param id="1" name="Layer">&quot;Buang Sampah&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="800211851479837" type="ImgSampahBuang">
+                                    <param id="0" name="Instance variable">sampahke</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="997352564318986" type="ImgSampahBuang">
+                                    <param id="0" name="Animation">&quot;organik&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="226129635022151" type="ImgSampahBuang">
+                                    <param id="0" name="Instance variable">jenis</param>
+                                    <param id="1" name="Value">&quot;organik&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="486304236235023">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="401131383412894" type="System">
+                                    <param id="0" name="Variable">sampahdidapat</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;anorganik&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="720167955869846" type="BGKantong">
+                                    <param id="0" name="Object">ImgSampahBuang</param>
+                                    <param id="1" name="Layer">&quot;Buang Sampah&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="825367848808958" type="ImgSampahBuang">
+                                    <param id="0" name="Instance variable">sampahke</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="373750250940693" type="ImgSampahBuang">
+                                    <param id="0" name="Animation">&quot;anorganik&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="736959413693287" type="ImgSampahBuang">
+                                    <param id="0" name="Instance variable">jenis</param>
+                                    <param id="1" name="Value">&quot;anorganik&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="188217761835190">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="257912015688505" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="711126773253217">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="681059854900570" type="System">
+                                    <param id="0" name="Variable">sampahke2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="367869687580650" type="System">
+                                    <param id="0" name="Variable">sampahke2</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="204989450340764">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="457248275826645" type="System">
+                                            <param id="0" name="Variable">sampahdidapat</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;organik&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="252095640771590" type="BGKantong">
+                                            <param id="0" name="Object">ImgSampahBuang</param>
+                                            <param id="1" name="Layer">&quot;Buang Sampah&quot;</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="230037586596533" type="ImgSampahBuang">
+                                            <param id="0" name="Animation">&quot;organik&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="581069053415127" type="ImgSampahBuang">
+                                            <param id="0" name="Instance variable">sampahke</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="339507419932352" type="ImgSampahBuang">
+                                            <param id="0" name="Instance variable">jenis</param>
+                                            <param id="1" name="Value">&quot;organik&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="746505581776914">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="498630652039511" type="System">
+                                            <param id="0" name="Variable">sampahdidapat</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;anorganik&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="787027075261321" type="BGKantong">
+                                            <param id="0" name="Object">ImgSampahBuang</param>
+                                            <param id="1" name="Layer">&quot;Buang Sampah&quot;</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="560578991294846" type="ImgSampahBuang">
+                                            <param id="0" name="Animation">&quot;anorganik&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="953183717949290" type="ImgSampahBuang">
+                                            <param id="0" name="Instance variable">sampahke</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="835901705366053" type="ImgSampahBuang">
+                                            <param id="0" name="Instance variable">jenis</param>
+                                            <param id="1" name="Value">&quot;anorganik&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="654026854276816">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="648843050579847" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="262285107760536">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="956534614994434" type="System">
+                                            <param id="0" name="Variable">sampahke3</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="997403818060236" type="System">
+                                            <param id="0" name="Variable">sampahke3</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="266848469433871">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="855422298238306" type="System">
+                                                    <param id="0" name="Variable">sampahdidapat</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;organik&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="673775095078107" type="BGKantong">
+                                                    <param id="0" name="Object">ImgSampahBuang</param>
+                                                    <param id="1" name="Layer">&quot;Buang Sampah&quot;</param>
+                                                    <param id="2" name="Image point">3</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="792010469937160" type="ImgSampahBuang">
+                                                    <param id="0" name="Animation">&quot;organik&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="895703288024516" type="ImgSampahBuang">
+                                                    <param id="0" name="Instance variable">sampahke</param>
+                                                    <param id="1" name="Value">3</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="776372398440040" type="ImgSampahBuang">
+                                                    <param id="0" name="Instance variable">jenis</param>
+                                                    <param id="1" name="Value">&quot;organik&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="406677381051726">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="640235537982017" type="System">
+                                                    <param id="0" name="Variable">sampahdidapat</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;anorganik&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="219938436082675" type="BGKantong">
+                                                    <param id="0" name="Object">ImgSampahBuang</param>
+                                                    <param id="1" name="Layer">&quot;Buang Sampah&quot;</param>
+                                                    <param id="2" name="Image point">3</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="545660394165783" type="ImgSampahBuang">
+                                                    <param id="0" name="Animation">&quot;anorganik&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="151208941225979" type="ImgSampahBuang">
+                                                    <param id="0" name="Instance variable">sampahke</param>
+                                                    <param id="1" name="Value">3</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="204173300095273" type="ImgSampahBuang">
+                                                    <param id="0" name="Instance variable">jenis</param>
+                                                    <param id="1" name="Value">&quot;anorganik&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="745575336490168">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="471681310168285" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="396877641442212">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="515112079069183" type="System">
+                                                    <param id="0" name="Variable">sampahke4</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="371153805357047" type="System">
+                                                    <param id="0" name="Variable">sampahke4</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="271895838843594">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="573274002148355" type="System">
+                                                            <param id="0" name="Variable">sampahdidapat</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;organik&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Spawn another object" sid="844288027973069" type="BGKantong">
+                                                            <param id="0" name="Object">ImgSampahBuang</param>
+                                                            <param id="1" name="Layer">&quot;Buang Sampah&quot;</param>
+                                                            <param id="2" name="Image point">4</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="841736058130198" type="ImgSampahBuang">
+                                                            <param id="0" name="Animation">&quot;organik&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="358787869197430" type="ImgSampahBuang">
+                                                            <param id="0" name="Instance variable">sampahke</param>
+                                                            <param id="1" name="Value">4</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="413954161473682" type="ImgSampahBuang">
+                                                            <param id="0" name="Instance variable">jenis</param>
+                                                            <param id="1" name="Value">&quot;organik&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="308675169133766">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="144139443823365" type="System">
+                                                            <param id="0" name="Variable">sampahdidapat</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;anorganik&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Spawn another object" sid="637568038826606" type="BGKantong">
+                                                            <param id="0" name="Object">ImgSampahBuang</param>
+                                                            <param id="1" name="Layer">&quot;Buang Sampah&quot;</param>
+                                                            <param id="2" name="Image point">4</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="870522959187481" type="ImgSampahBuang">
+                                                            <param id="0" name="Animation">&quot;anorganik&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="518375077261540" type="ImgSampahBuang">
+                                                            <param id="0" name="Instance variable">sampahke</param>
+                                                            <param id="1" name="Value">4</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="211725146287457" type="ImgSampahBuang">
+                                                            <param id="0" name="Instance variable">jenis</param>
+                                                            <param id="1" name="Value">&quot;anorganik&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="861201396701202">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="125699919940338" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="402897633563716">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="479227216596052" type="System">
+                                                            <param id="0" name="Variable">sampahke5</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="940528297940657" type="System">
+                                                            <param id="0" name="Variable">sampahke5</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="997149755739465">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="777782142262521" type="System">
+                                                                    <param id="0" name="Variable">sampahdidapat</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;organik&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="907881667905071" type="BGKantong">
+                                                                    <param id="0" name="Object">ImgSampahBuang</param>
+                                                                    <param id="1" name="Layer">&quot;Buang Sampah&quot;</param>
+                                                                    <param id="2" name="Image point">5</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="478231490017111" type="ImgSampahBuang">
+                                                                    <param id="0" name="Animation">&quot;anorganik&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="676626649933079" type="ImgSampahBuang">
+                                                                    <param id="0" name="Instance variable">sampahke</param>
+                                                                    <param id="1" name="Value">5</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="225350466411409" type="ImgSampahBuang">
+                                                                    <param id="0" name="Instance variable">jenis</param>
+                                                                    <param id="1" name="Value">&quot;organik&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="372258327952561">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="861438245359641" type="System">
+                                                                    <param id="0" name="Variable">sampahdidapat</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;anorganik&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="807330730358304" type="BGKantong">
+                                                                    <param id="0" name="Object">ImgSampahBuang</param>
+                                                                    <param id="1" name="Layer">&quot;Buang Sampah&quot;</param>
+                                                                    <param id="2" name="Image point">5</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="505614615908117" type="ImgSampahBuang">
+                                                                    <param id="0" name="Animation">&quot;anorganik&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="107130378054675" type="ImgSampahBuang">
+                                                                    <param id="0" name="Instance variable">sampahke</param>
+                                                                    <param id="1" name="Value">5</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="946265175037205" type="ImgSampahBuang">
+                                                                    <param id="0" name="Instance variable">jenis</param>
+                                                                    <param id="1" name="Value">&quot;anorganik&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Tempat Sampah</comment>
+        <variable constant="0" name="sampahke1" sid="607887775113471" static="0" type="number">0</variable>
+        <variable constant="0" name="sampahke2" sid="659239051386957" static="0" type="number">0</variable>
+        <variable constant="0" name="sampahke3" sid="585120189901897" static="0" type="number">0</variable>
+        <variable constant="0" name="sampahke4" sid="683604485212952" static="0" type="number">0</variable>
+        <variable constant="0" name="sampahke5" sid="196278595035703" static="0" type="number">0</variable>
+        <variable constant="0" name="jenistempat" sid="412799197122274" static="0" type="text"></variable>
+        <event-block sid="780751743363091">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="807094908472191" type="TempatSampah">
+                    <param id="0" name="Instance variable">Jenis</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;organik&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="349060552711576" type="TempatSampah">
+                    <param id="0" name="Animation">&quot;Organik&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="290129314331674">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="657629747413144" type="TempatSampah">
+                    <param id="0" name="Instance variable">Jenis</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;anorganik&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="362771326859975" type="TempatSampah">
+                    <param id="0" name="Animation">&quot;Anorganik&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="534339354158429">
+            <conditions>
+                <condition id="17" name="On tap object" sid="607212657375104" type="Touch">
+                    <param id="0" name="Object">ButtonTempatSampah</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="526217115127330">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="989338505818463" type="chara">
+                            <param id="0" name="Object">TempatSampah</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="400022950963124" type="System">
+                            <param id="0" name="Variable">isBuangSampah</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="270891161803917">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="635110825512517" type="TempatSampah">
+                                    <param id="0" name="Instance variable">Jenis</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;anorganik&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="576588756244171" type="System">
+                                    <param id="0" name="Variable">jenistempat</param>
+                                    <param id="1" name="Value">&quot;anorganik&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="701394573689386" type="Sprite2">
+                                    <param id="0" name="Instance variable">jenistempatsampah</param>
+                                    <param id="1" name="Value">&quot;anorganik&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="991606466161789" type="Sprite2">
+                                    <param id="0" name="Animation">&quot;Anorganik&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="598326007674179">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="214394290628494" type="TempatSampah">
+                                    <param id="0" name="Instance variable">Jenis</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;organik&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="545745630568727" type="System">
+                                    <param id="0" name="Variable">jenistempat</param>
+                                    <param id="1" name="Value">&quot;organik&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="118566789835193" type="Sprite2">
+                                    <param id="0" name="Instance variable">jenistempatsampah</param>
+                                    <param id="1" name="Value">&quot;organik&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="824501444013493" type="Sprite2">
+                                    <param id="0" name="Animation">&quot;Organik&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="355406393361022">
+            <conditions>
+                <condition id="17" name="On tap object" sid="512803549256185" type="Touch">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="744327938559784" type="System">
+                    <param id="0" name="Variable">isBuangSampah</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="679659427730732">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="837134393020159" type="System">
+                    <param id="0" name="Variable">isBuangSampah</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="350785899140012" type="System">
+                    <param id="0" name="Layer">&quot;Buang Sampah&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="583393602522317" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-17" name="Set layer scale" sid="605727054436142" type="System">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                    <param id="1" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="597578120793111">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="598771163199862" type="System">
+                    <param id="0" name="Variable">isBuangSampah</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="427855827187290" type="System">
+                    <param id="0" name="Layer">&quot;Buang Sampah&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="860882281317217" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-17" name="Set layer scale" sid="801223226238232" type="System">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                    <param id="1" name="Scale">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="136503734055133">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="236476058948438" type="ImgSampahBuang" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="438452492367909">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="194723099672428" type="ImgSampahBuang">
+                            <param id="0" name="Object">Sprite2</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="725290739585244" type="System">
+                            <param id="0" name="First value">ImgSampahBuang.jenis</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">Sprite2.jenistempatsampah</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="291652686111350" type="ImgSampahBuang" />
+                        <action id="-11" name="Subtract from" sid="332769095045713" type="System">
+                            <param id="0" name="Variable">SampahDiKantong</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="388767205747409">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="839216899955077" type="ImgSampahBuang">
+                                    <param id="0" name="Instance variable">sampahke</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="592540311507684" type="System">
+                                    <param id="0" name="Variable">sampahke1</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="856130879072375">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="891329595012330" type="ImgSampahBuang">
+                                    <param id="0" name="Instance variable">sampahke</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="868671370148102" type="System">
+                                    <param id="0" name="Variable">sampahke2</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="836970333697857">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="224147019696019" type="ImgSampahBuang">
+                                    <param id="0" name="Instance variable">sampahke</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="498816197312600" type="System">
+                                    <param id="0" name="Variable">sampahke3</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="762806400808453">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="689073225627512" type="ImgSampahBuang">
+                                    <param id="0" name="Instance variable">sampahke</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="505548871864397" type="System">
+                                    <param id="0" name="Variable">sampahke4</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="723600543229040">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="435567701853922" type="ImgSampahBuang">
+                                    <param id="0" name="Instance variable">sampahke</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="169170402764103" type="System">
+                                    <param id="0" name="Variable">sampahke5</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="786377543329721">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="641551763471855" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="177284798671709" type="ImgSampahBuang">
+                            <param id="0" name="Object">BGKantong</param>
+                            <param id="1" name="Image point (optional)">ImgSampahBuang.sampahke</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="922799794106289">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="712548760293575" type="chara">
+                    <param id="0" name="Object">Lumpur</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="1" name="Set max speed" sid="523859422139170" type="chara">
+                    <param id="0" name="Max Speed">150</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="242262659908795">
+            <conditions>
+                <condition id="-22" name="Else" sid="514437209484124" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="1" name="Set max speed" sid="506673715737887" type="chara">
+                    <param id="0" name="Max Speed">330</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="584341838364929">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="759835066274616" type="Tikus">
+                    <param id="0" name="Object">chara</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="582194287059395" type="System">
+                    <param id="0" name="Variable">isStun</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Stun Effect</comment>
+        <event-block sid="468991516738540">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="279428454180950" type="System">
+                    <param id="0" name="Variable">isStun</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="793044849934964" type="System">
+                    <param id="0" name="Group name">&quot;Controller&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="705604884134403">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="528717349626474" type="System">
+                    <param id="0" name="Variable">isStun</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="482615328244521" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="762127301528669" type="System">
+                    <param id="0" name="Group name">&quot;Controller&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="159902536291522" type="chara">
+                    <param id="0" name="Animation">&quot;stun&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="108420647007393" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="396715910019549" type="System">
+                    <param id="0" name="Variable">isStun</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>TapTap</comment>
+        <variable constant="0" name="isTapTap" sid="446730463143243" static="0" type="number">0</variable>
+        <variable constant="0" name="finishTapTap" sid="182131241848420" static="0" type="number">0</variable>
+        <variable constant="0" name="progressTapTap" sid="609079136494179" static="0" type="number">0</variable>
+        <event-block sid="392608327636446">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="493482623273232" type="System">
+                    <param id="0" name="Variable">isTapTap</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="183586724183898" type="System">
+                    <param id="0" name="Variable">isStun</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="145142760452277" type="ButtonControl">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="839890659450099" type="TapBar">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="805657259942518" type="System">
+                    <param id="0" name="Group name">&quot;Controller&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="100741039389369">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="933403358994444" type="System">
+                    <param id="0" name="Variable">isTapTap</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="785465064375858" type="ButtonControl">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="883491900310661" type="TapBar">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="969165767858667" type="System">
+                    <param id="0" name="Group name">&quot;Controller&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="247087820799956" title="TapTap">
+            <sub-events>
+                <event-block sid="971951883970108">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="800880456254169" type="Touch">
+                            <param id="0" name="Object">ButtonTempatSampah</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="587208014131852" type="chara">
+                            <param id="0" name="Object">SampahNumpuk</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="190148625368410">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="268779893416775" type="System">
+                                    <param id="0" name="Variable">SampahDiKantong</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">maxKantong - 3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="933383650380981" type="System">
+                                    <param id="0" name="Variable">isTapTap</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="593244130569275" type="System">
+                                    <param id="0" name="Variable">finishTapTap</param>
+                                    <param id="1" name="Value">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="357524390551288">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="844632591189192" type="Touch">
+                            <param id="0" name="Object">TapTap</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="642222002236533" type="System">
+                            <param id="0" name="Variable">progressTapTap</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="560519963442738">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="419770717125681" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="666396871185504" type="Progress">
+                            <param id="0" name="Width">lerp(Self.Width, (progressTapTap/100) * 675, 0.1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="287458043315590">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="664429009873386" type="System">
+                            <param id="0" name="Variable">progressTapTap</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="902550388931620" type="System">
+                            <param id="0" name="Variable">isTapTap</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="464788167190022" type="System">
+                            <param id="0" name="Variable">progressTapTap</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="217843130117965" type="System">
+                            <param id="0" name="Variable">SampahDiKantong</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="756181800059236" type="SampahNumpuk" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>WPG</name>
+    <description>halo</description>
+    <version>1.0.0.0</version>
+    <author>gt07</author>
+    <author-email>aa</author-email>
+    <author-website>http://aa</author-website>
+    <app-id>com.tackleflooding.prototype</app-id>
+    <unique-id>220bq75zcj7gt</unique-id>
+    <saved-with-version>27200</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Scale inner</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Ground">
+            <object-type name="TanahBawah" sid="540850497018667">
+                <plugin id="Tilemap" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="875072007553339">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="E:\Tugas\Kuliah\Semester 2\WPG 2\Tackle Flooding\Ground\TileMap-01.jpg" />
+                <tiles>
+                    <tile id="0">
+                        <collision-poly>
+                            <point x="0" y="0.140625" />
+                            <point x="0.984375" y="0.140625" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </tile>
+                    <tile id="4">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </tile>
+                    <tile id="7">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </tile>
+                    <tile id="55">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0.359375" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </tile>
+                    <tile id="56">
+                        <collision-poly>
+                            <point x="0" y="0.359375" />
+                            <point x="0.994792" y="0.671875" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </tile>
+                    <tile id="57">
+                        <collision-poly>
+                            <point x="0" y="0.65625" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </tile>
+                </tiles>
+            </object-type>
+            <object-type name="TembokBatas" sid="362686150425105">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="817533088565027">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="613618702176530" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Background">
+            <object-type name="bg" sid="314950431416419">
+                <plugin id="TiledBg" />
+                <texture original-source="E:\Tugas\Kuliah\Semester 2\WPG 2\Tackle Flooding\Background\Background_Jakarta-01.jpg" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Rintangan">
+            <object-type name="Lumpur" sid="248819197002765">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="197653239964195" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Tikus" sid="926987153371293">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="103190298654757">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861114922038017" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Sampah">
+            <object-type name="ImgSampahBuang" sid="216658869615305">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="sampahke" sid="470538042594414" type="number" />
+                    <instance-variable name="jenis" sid="208734961288256" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="448804982741797">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="organik" pingpong="0" repeatcount="1" repeatto="0" sid="374606911261031" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\Tackle Flooding\sampah2.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="anorganik" pingpong="0" repeatcount="1" repeatto="0" sid="889181770006145" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502564" original-source="E:\Project\Tackle Flooding\sampah1.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="sampah" sid="936491317264588">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="jenis" sid="561613479028798" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="anorganik" pingpong="0" repeatcount="1" repeatto="0" sid="959756402460395" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502564" original-source="E:\Project\Tackle Flooding\sampah1.png">
+                            <collision-poly>
+                                <point x="0.197297" y="0.374359" />
+                                <point x="0.5" y="0.189744" />
+                                <point x="0.948649" y="0.0974359" />
+                                <point x="0.997297" y="0.497436" />
+                                <point x="0.5" y="0.984615" />
+                                <point x="0.0864865" y="0.835897" />
+                                <point x="0.172973" y="0.497436" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="organik" pingpong="0" repeatcount="1" repeatto="0" sid="684509866671887" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\Tackle Flooding\sampah2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SampahNumpuk" sid="359190066188386">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219795795937617" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TempatSampah" sid="491231552445111">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Jenis" sid="827872341534531" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Anorganik" pingpong="0" repeatcount="1" repeatto="0" sid="622290115132412" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="-1.388" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Organik" pingpong="0" repeatcount="1" repeatto="0" sid="399410372972240" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="-1.388" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="UI">
+            <object-type name="ArrowButton" sid="694835805943888">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="arrow" sid="336880457704052" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="742175987326522" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\Game NSP-2m2oqhlgof90t\Game NSP-2m2oqhlgof90t\Animations\atas\Default\000.png">
+                            <collision-poly>
+                                <point x="0.158537" y="0.158537" />
+                                <point x="0.5" y="0.0121951" />
+                                <point x="0.841463" y="0.158537" />
+                                <point x="0.987805" y="0.5" />
+                                <point x="0.841463" y="0.841463" />
+                                <point x="0.5" y="0.987805" />
+                                <point x="0.158537" y="0.841463" />
+                                <point x="0.0121951" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ButtonTempatSampah" sid="299953795846334">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="880300421749733" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\Game PKN\Button\flatDark47.png">
+                            <collision-poly>
+                                <point x="0.15" y="0.15" />
+                                <point x="0.5" y="0" />
+                                <point x="0.85" y="0.15" />
+                                <point x="1" y="0.5" />
+                                <point x="0.85" y="0.85" />
+                                <point x="0.5" y="1" />
+                                <point x="0.15" y="0.85" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BGKantong" sid="792525041008036">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="513239821356499" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\Game PKN\Question\QuestionBox.png">
+                            <image-point name="Imagepoint 1" x="0.167702" y="0.5" />
+                            <image-point name="Imagepoint 2" x="0.335404" y="0.5" />
+                            <image-point name="Imagepoint 3" x="0.503106" y="0.5" />
+                            <image-point name="Imagepoint 4" x="0.670807" y="0.5" />
+                            <image-point name="Imagepoint 5" x="0.838509" y="0.5" />
+                            <image-point name="Imagepoint 6" x="0.0279503" y="1.82927" />
+                            <image-point name="Imagepoint 7" x="0.506211" y="1.63415" />
+                            <collision-poly>
+                                <point x="0.00931677" y="0.0365854" />
+                                <point x="0.987578" y="0.0487805" />
+                                <point x="0.987578" y="0.951219" />
+                                <point x="0.00931677" y="0.963415" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite" sid="253362293585524">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="583955914738860" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite2" sid="938411173611009">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="jenistempatsampah" sid="428873962427298" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Anorganik" pingpong="0" repeatcount="1" repeatto="0" sid="172907105280351" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Organik" pingpong="0" repeatcount="1" repeatto="0" sid="585267806909048" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SampahDibawa" sid="702677919974900">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="TapTap">
+            <object-type name="ProgressPlace" sid="838661152138950">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="863005205032539" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0" y="0" />
+                            <image-point name="Imagepoint 2" x="1.196" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Progress" sid="425839712252155">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="585144512660184" speed="5">
+                        <frame duration="1" hotspotX="-0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TapTap" sid="271797158718056">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525331001866643" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\Game PKN\Button\flatDark47.png">
+                            <collision-poly>
+                                <point x="0.15" y="0.15" />
+                                <point x="0.5" y="0" />
+                                <point x="0.85" y="0.15" />
+                                <point x="1" y="0.5" />
+                                <point x="0.85" y="0.85" />
+                                <point x="0.5" y="1" />
+                                <point x="0.15" y="0.85" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="chara" sid="294768405300385">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="191802663905181">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="467979795413102">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="738795153725786" speed="5">
+                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Idle\idle_1.png" />
+                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Idle\idle_2.png" />
+                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Idle\idle_3.png" />
+                </animation>
+                <animation framecount="5" loop="0" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="827437052584993" speed="5">
+                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Walk\walk_1.png" />
+                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Walk\walk_2.png" />
+                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Walk\walk_3.png" />
+                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Walk\walk_4.png" />
+                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Walk\walk_5.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="stun" pingpong="0" repeatcount="1" repeatto="0" sid="950666926858615" speed="5">
+                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="135409622040763">
+            <plugin id="Touch" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="ButtonControl" plugin-id="Sprite" sid="460230406994588">
+            <members>
+                <member>ArrowButton</member>
+                <member>ButtonTempatSampah</member>
+                <member>TapTap</member>
+            </members>
+        </family>
+        <family name="TapBar" plugin-id="Sprite" sid="700555115320362">
+            <members>
+                <member>Progress</member>
+                <member>ProgressPlace</member>
+                <member>TapTap</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Control.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="3">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
