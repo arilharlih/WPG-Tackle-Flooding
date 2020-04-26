@@ -231,16 +231,16 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="742175987326522" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\Game NSP-2m2oqhlgof90t\Game NSP-2m2oqhlgof90t\Animations\atas\Default\000.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\WPG\images\arrow.png">
                             <collision-poly>
-                                <point x="0.158537" y="0.158537" />
-                                <point x="0.5" y="0.0121951" />
                                 <point x="0.841463" y="0.158537" />
                                 <point x="0.987805" y="0.5" />
                                 <point x="0.841463" y="0.841463" />
                                 <point x="0.5" y="0.987805" />
                                 <point x="0.158537" y="0.841463" />
-                                <point x="0.0121951" y="0.5" />
+                                <point x="0.012195" y="0.5" />
+                                <point x="0.158537" y="0.158537" />
+                                <point x="0.5" y="0.0121951" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -312,6 +312,9 @@
             <object-type name="SampahDibawa" sid="702677919974900">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="TimerText" sid="574404761974430">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="TapTap">
             <object-type name="ProgressPlace" sid="838661152138950">
@@ -364,20 +367,17 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="738795153725786" speed="5">
-                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Idle\idle_1.png" />
-                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Idle\idle_2.png" />
-                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Idle\idle_3.png" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="738795153725786" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.375" original-source="D:\WPG\images\Character\Sprite-Walk.png" />
                 </animation>
-                <animation framecount="5" loop="0" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="827437052584993" speed="5">
-                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Walk\walk_1.png" />
-                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Walk\walk_2.png" />
-                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Walk\walk_3.png" />
-                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Walk\walk_4.png" />
-                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" original-source="D:\Unity Project\Flappy Bird\WPG\WPG\Assets\Angie Sprite\Walk\walk_5.png" />
+                <animation framecount="4" loop="0" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="827437052584993" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.375" original-source="D:\WPG\images\Character\Sprite-Walk.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.375" original-source="D:\WPG\images\Character\Sprite-Walk.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.375" original-source="D:\WPG\images\Character\Sprite-Walk.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.375" />
                 </animation>
                 <animation framecount="1" loop="0" name="stun" pingpong="0" repeatcount="1" repeatto="0" sid="950666926858615" speed="5">
-                    <frame duration="1" hotspotX="0.59734" hotspotY="-0.319945" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.375" original-source="D:\WPG\images\Character\Sprite-Walk.png" />
                 </animation>
             </animation-folder>
         </object-type>

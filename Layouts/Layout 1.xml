@@ -409,14 +409,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2352</x>
-                        <y>515</y>
+                        <x>236</x>
+                        <y>570</y>
                         <z>0</z>
-                        <width>113.107475281</width>
-                        <height>197.49357605</height>
+                        <width>74.950416565</width>
+                        <height>149.90083313</height>
                         <depth>0</depth>
-                        <hotspotX>0.597339809</hotspotX>
-                        <hotspotY>-0.31994459</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>-0.375</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -553,8 +553,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1179</x>
-                        <y>656</y>
+                        <x>1177</x>
+                        <y>661</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -565,31 +565,6 @@
                         <opacity>0.699999988</opacity>
                     </world>
                 </instance>
-                <instance type="ArrowButton" uid="7">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <arrow>crouch</arrow>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1039</x>
-                        <y>665</y>
-                        <z>0</z>
-                        <width>100</width>
-                        <height>100</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>0.699999988</opacity>
-                    </world>
-                </instance>
                 <instance type="SampahDibawa" uid="10">
                     <properties>
                         <text>Text</text>
@@ -597,7 +572,7 @@
                         <font>Arial Black,-24,900,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -605,8 +580,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>382</x>
-                        <y>329</y>
+                        <x>62</x>
+                        <y>40</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -637,6 +612,33 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>0.699999988</opacity>
+                    </world>
+                </instance>
+                <instance type="TimerText" uid="7">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial Black,-24,900,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1139.5</x>
+                        <y>74.5</y>
+                        <z>0</z>
+                        <width>224</width>
+                        <height>57</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>

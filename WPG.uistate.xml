@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Layout 1</layout>
-        <event-sheet order="1">Event sheet 1</event-sheet>
+        <layout order="0">Layout 1</layout>
+        <event-sheet active="1" order="1">Event sheet 1</event-sheet>
         <event-sheet order="2">Control</event-sheet>
     </open-tabs>
     <properties>
@@ -30,8 +30,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Background/" />
         <folder expanded="0" path="object-folder/Rintangan/" />
         <folder expanded="0" path="object-folder/Sampah/" />
-        <folder expanded="0" path="object-folder/UI/" />
-        <folder expanded="1" path="object-folder/TapTap/" />
+        <folder expanded="1" path="object-folder/UI/" />
+        <folder expanded="0" path="object-folder/TapTap/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
