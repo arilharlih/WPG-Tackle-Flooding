@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Splash</layout>
+        <layout order="2">Main_Menu</layout>
+        <layout active="1" order="4">Level_1</layout>
+        <event-sheet order="1">Splash</event-sheet>
+        <event-sheet order="3">Main_Menu</event-sheet>
+        <event-sheet order="5">Level</event-sheet>
+        <event-sheet order="6">Loader</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="0" name="Controller" />
+        <family expanded="0" name="MainMenuButton" />
+        <family expanded="0" name="InPauseButton" />
+        <family expanded="0" name="LevelEndButton" />
+        <family expanded="0" name="InfoDesc" />
+        <family expanded="0" name="BuangSampah" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/Main Menu/" />
+        <folder expanded="0" path="object-folder/Pilih Level/" />
+        <folder expanded="1" path="object-folder/Credit/" />
+        <folder expanded="0" path="object-folder/System/" />
+        <folder expanded="1" path="object-folder/Rintangan/" />
+        <folder expanded="0" path="object-folder/Splash Screen/" />
+        <folder expanded="1" path="object-folder/IN-GAME/" />
+        <folder expanded="1" path="object-folder/IN-GAME/Background/" />
+        <folder expanded="0" path="object-folder/IN-GAME/Ground/" />
+        <folder expanded="0" path="object-folder/IN-GAME/UI/" />
+        <folder expanded="0" path="object-folder/IN-GAME/Player/" />
+        <folder expanded="0" path="object-folder/IN-GAME/LevelEnd/" />
+        <folder expanded="0" path="object-folder/IN-GAME/Rintangan/" />
+        <folder expanded="0" path="object-folder/IN-GAME/Buang Sampah/" />
+        <folder expanded="0" path="object-folder/IN-GAME/Sampah/" />
+        <folder expanded="0" path="object-folder/IN-GAME/Pause/" />
+        <folder expanded="0" path="object-folder/IN-GAME/Info Sampah/" />
+        <folder expanded="0" path="object-folder/IN-GAME/Rain/" />
+        <folder expanded="0" path="object-folder/Loader/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="0" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/creditButton/" />
+        <folder expanded="1" path="animation-folder/playButton/" />
+        <folder expanded="1" path="animation-folder/MainMenuBox/" />
+        <folder expanded="1" path="animation-folder/background/" />
+        <folder expanded="1" path="animation-folder/level/" />
+        <folder expanded="1" path="animation-folder/PilihLevelBox/" />
+        <folder expanded="1" path="animation-folder/gametext/" />
+        <folder expanded="1" path="animation-folder/Logo_PENS/" />
+        <folder expanded="1" path="animation-folder/splashBG/" />
+        <folder expanded="1" path="animation-folder/Batas/" />
+        <folder expanded="1" path="animation-folder/arrow/" />
+        <folder expanded="1" path="animation-folder/interact/" />
+        <folder expanded="1" path="animation-folder/KantongBG/" />
+        <folder expanded="1" path="animation-folder/pause/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/GroundCheck/" />
+        <folder expanded="1" path="animation-folder/LevelEnd/" />
+        <folder expanded="1" path="animation-folder/homebutton/" />
+        <folder expanded="1" path="animation-folder/RestartNextButton/" />
+        <folder expanded="1" path="animation-folder/Lumpur/" />
+        <folder expanded="1" path="animation-folder/inforintangan/" />
+        <folder expanded="1" path="animation-folder/PilihSampah/" />
+        <folder expanded="1" path="animation-folder/SampahDiKantong/" />
+        <folder expanded="1" path="animation-folder/BtnTempatSampah/" />
+        <folder expanded="1" path="animation-folder/BlackScreen/" />
+        <folder expanded="1" path="animation-folder/back/" />
+        <folder expanded="1" path="animation-folder/Sampah/" />
+        <folder expanded="1" path="animation-folder/TempatSampah/" />
+        <folder expanded="1" path="animation-folder/PauseWall/" />
+        <folder expanded="1" path="animation-folder/homepause/" />
+        <folder expanded="1" path="animation-folder/RestartPause/" />
+        <folder expanded="1" path="animation-folder/PlayPause/" />
+        <folder expanded="1" path="animation-folder/InfoBox/" />
+        <folder expanded="1" path="animation-folder/BlackScreenInfo/" />
+        <folder expanded="1" path="animation-folder/kembalitext/" />
+        <folder expanded="1" path="animation-folder/raindrop/" />
+        <folder expanded="1" path="animation-folder/LoaderBackground/" />
+        <folder expanded="1" path="animation-folder/CharaLoader/" />
+        <folder expanded="1" path="animation-folder/LoaderText/" />
+    </folders-expanded>
+</c2uistate>

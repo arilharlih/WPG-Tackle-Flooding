@@ -1,0 +1,1313 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Tackle Flooding</name>
+    <description>Game Edukasi Penanggulangan Banjir</description>
+    <version>0.1.1</version>
+    <author>Game Texhnology 2019</author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.tackleflooding.gt</app-id>
+    <unique-id>2yppi957pi8en</unique-id>
+    <saved-with-version>27200</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="brightness">Brightness</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Splash</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Scale outer</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Nothing (not recommended)</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Main Menu">
+            <object-type name="creditButton" sid="464975707030201">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="126645460266705">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="321889559698176" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\Main Menu\credit button.png">
+                            <collision-poly>
+                                <point x="0.053012" y="0.0785714" />
+                                <point x="0.5" y="0.341071" />
+                                <point x="0.893976" y="0.157143" />
+                                <point x="0.771084" y="0.5" />
+                                <point x="0.948193" y="0.923214" />
+                                <point x="0.5" y="0.998214" />
+                                <point x="0.166265" y="0.753571" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="playButton" sid="340210506127632">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="855514722727967">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="821906261314158" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\Main Menu\play button.png">
+                            <collision-poly>
+                                <point x="0.053012" y="0.0785714" />
+                                <point x="0.5" y="0.508929" />
+                                <point x="0.893976" y="0.157143" />
+                                <point x="0.783133" y="0.5" />
+                                <point x="0.948193" y="0.923214" />
+                                <point x="0.5" y="0.998214" />
+                                <point x="0.166265" y="0.753571" />
+                                <point x="0.192771" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MainMenuBox" sid="484450663747783">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="710038363124997" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="ButtonPlay" x="0.273438" y="0.75" />
+                            <image-point name="ButtonCredit" x="0.726563" y="0.75" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="background" sid="531583740445921">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="596834380476160" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\Main Menu\background.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.999219" y="0.998611" />
+                                <point x="0.00078125" y="0.998611" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Pilih Level">
+            <object-type name="level" sid="863926888254944">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="level_id" sid="981414429117586" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="273783589420269">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="Brightness">
+                        <effect id="brightness" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="286415943499105" speed="0">
+                        <frame duration="1" hotspotX="0.501832" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\Pilih Level\level-unlock.png">
+                            <collision-poly>
+                                <point x="0.14652" y="0.145985" />
+                                <point x="0.498168" y="0.00364964" />
+                                <point x="0.85348" y="0.145985" />
+                                <point x="1" y="0.5" />
+                                <point x="0.85348" y="0.854015" />
+                                <point x="0.498168" y="0.99635" />
+                                <point x="0.14652" y="0.854015" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.501832" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\Pilih Level\level-1.png">
+                            <collision-poly>
+                                <point x="0.150183" y="0.149635" />
+                                <point x="0.498168" y="0.00364964" />
+                                <point x="0.85348" y="0.145985" />
+                                <point x="1" y="0.5" />
+                                <point x="0.85348" y="0.854015" />
+                                <point x="0.498168" y="0.99635" />
+                                <point x="0.14652" y="0.854015" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\Pilih Level\level-2.png">
+                            <collision-poly>
+                                <point x="0.149635" y="0.149635" />
+                                <point x="0.5" y="0.00364964" />
+                                <point x="0.850365" y="0.149635" />
+                                <point x="0.99635" y="0.5" />
+                                <point x="0.850365" y="0.850365" />
+                                <point x="0.5" y="0.99635" />
+                                <point x="0.149635" y="0.850365" />
+                                <point x="0.00364964" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.501832" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\Pilih Level\level-3.png">
+                            <collision-poly>
+                                <point x="0.14652" y="0.145985" />
+                                <point x="0.498168" y="0.00364964" />
+                                <point x="0.849817" y="0.149635" />
+                                <point x="1" y="0.5" />
+                                <point x="0.85348" y="0.854015" />
+                                <point x="0.498168" y="0.99635" />
+                                <point x="0.14652" y="0.854015" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PilihLevelBox" sid="587168795443735">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="312115732988375" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Level 1" x="0.164063" y="0.5" />
+                            <image-point name="Level 2" x="0.5" y="0.5" />
+                            <image-point name="Level 3" x="0.835938" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Credit" />
+        <object-folder name="System">
+            <object-type name="Touch" sid="786791158296519">
+                <plugin id="Touch" />
+            </object-type>
+            <object-type name="Function" sid="420953026833121">
+                <plugin id="Function" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Rintangan" />
+        <object-folder name="Splash Screen">
+            <object-type name="gametext" sid="365724546207323">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="659510849741950">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="970224308263491" speed="5">
+                        <frame duration="1" hotspotX="0.500521" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\Splash Screen\gametext.png">
+                            <collision-poly>
+                                <point x="0.157456" y="0.160981" />
+                                <point x="0.499479" y="0.180171" />
+                                <point x="0.936392" y="0.065032" />
+                                <point x="0.818561" y="0.5" />
+                                <point x="0.948905" y="0.947761" />
+                                <point x="0.499479" y="0.996802" />
+                                <point x="0.0104275" y="0.989339" />
+                                <point x="0.080292" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Logo_PENS" sid="175508143670343">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="869570013382827">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="374202046726934" speed="5">
+                        <frame duration="1" hotspotX="0.501279" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\Splash Screen\Logo_PENS.png">
+                            <collision-poly>
+                                <point x="0.186701" y="0.196237" />
+                                <point x="0.498721" y="0.0376344" />
+                                <point x="0.810742" y="0.198925" />
+                                <point x="0.800511" y="0.5" />
+                                <point x="0.895141" y="0.889785" />
+                                <point x="0.498721" y="0.919355" />
+                                <point x="0.373402" y="0.607527" />
+                                <point x="0.194373" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="splashBG" sid="481131575093815">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="446552067035448">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="201577487482993" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="IN-GAME">
+            <object-folder name="Background">
+                <object-type name="JakartaBackground" sid="889139618219265">
+                    <plugin id="TiledBg" />
+                    <instance-variables>
+                        <instance-variable name="brightnessValue" sid="163033184054624" type="number" />
+                    </instance-variables>
+                    <effects>
+                        <effect-type name="Brightness">
+                            <effect id="brightness" />
+                        </effect-type>
+                    </effects>
+                    <texture original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Background\Background_Jakarta-01.png" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Ground">
+                <object-type name="Batas" sid="907459923919384">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="651001464310269">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="100701924844093" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="GroundAtas" sid="992351646873226">
+                    <plugin id="Tilemap" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="628677684558417">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Ground\TileGroundv2-01.png" />
+                    <tiles>
+                        <tile id="0">
+                            <collision-poly>
+                                <point x="0.429688" y="1" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                    </tiles>
+                </object-type>
+                <object-type name="GroundBawah" sid="247385734269437">
+                    <plugin id="Tilemap" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="432229226179300">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Ground\TileGround-01.png" />
+                    <tiles>
+                        <tile id="0">
+                            <collision-poly>
+                                <point x="0.429688" y="1" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                    </tiles>
+                </object-type>
+            </object-folder>
+            <object-folder name="UI">
+                <object-type name="arrow" sid="927927060572753">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="arah" sid="666731067809604" type="string" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="793549179327566" speed="5">
+                            <frame duration="1" hotspotX="0.500522" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\Button\arrow.png">
+                                <collision-poly>
+                                    <point x="0.14629" y="0.146138" />
+                                    <point x="0.499478" y="0.00104384" />
+                                    <point x="0.852665" y="0.147182" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.852665" y="0.852818" />
+                                    <point x="0.499478" y="0.998956" />
+                                    <point x="0.14629" y="0.853862" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="interact" sid="355058267991128">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="131873468753103" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.500522" original-source="E:\Project\New Tackle Flooding\Assets\Button\interact.png">
+                                <collision-poly>
+                                    <point x="0.146138" y="0.14629" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.852818" y="0.147335" />
+                                    <point x="0.998956" y="0.499478" />
+                                    <point x="0.852818" y="0.852665" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.147182" y="0.852665" />
+                                    <point x="0.00104384" y="0.499478" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="KantongBG" sid="489283958911861">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="807814091801868" speed="5">
+                            <frame duration="1" hotspotX="0.455696" hotspotY="0.504373" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\UI\kantong.png">
+                                <image-point name="Text" x="0.631646" y="0.498542" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="KantongText" sid="159959311185687">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="Timer" sid="438063638270948">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="pause" sid="612720166264874">
+                    <plugin id="Sprite" />
+                    <effects>
+                        <effect-type name="Brightness">
+                            <effect id="brightness" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="371375338265723" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\Button\pause.png">
+                                <collision-poly>
+                                    <point x="0.0404494" y="0.0404494" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.958427" y="0.041573" />
+                                    <point x="0.998876" y="0.5" />
+                                    <point x="0.958427" y="0.958427" />
+                                    <point x="0.5" y="0.998876" />
+                                    <point x="0.0404494" y="0.959551" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Player">
+                <object-type name="Player" sid="632832790076292">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Platform" sid="330118423394628">
+                            <behavior id="Platform" />
+                        </behavior-type>
+                        <behavior-type name="ScrollTo" sid="103793110455935">
+                            <behavior id="scrollto" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="243358070093070" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Character\Sprite-Walk.png">
+                                <image-point name="GroundCheck" x="0.5" y="1.004" />
+                                <collision-poly>
+                                    <point x="0.107143" y="0" />
+                                    <point x="0.878571" y="0" />
+                                    <point x="0.885714" y="1" />
+                                    <point x="0.114286" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="900299056550816" speed="4">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Character\Sprite-Walk.png">
+                                <image-point name="GroundCheck" x="0.5" y="1.004" />
+                                <collision-poly>
+                                    <point x="0.107143" y="0" />
+                                    <point x="0.878571" y="0" />
+                                    <point x="0.885714" y="1" />
+                                    <point x="0.114286" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Character\Sprite-Walk.png">
+                                <image-point name="GroundCheck" x="0.5" y="1.004" />
+                                <collision-poly>
+                                    <point x="0.107143" y="0" />
+                                    <point x="0.878571" y="0" />
+                                    <point x="0.885714" y="1" />
+                                    <point x="0.114286" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0">
+                                <image-point name="GroundCheck" x="0.5" y="1.004" />
+                                <collision-poly>
+                                    <point x="0.107143" y="0" />
+                                    <point x="0.878571" y="0" />
+                                    <point x="0.885714" y="1" />
+                                    <point x="0.114286" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Character\Sprite-Walk.png">
+                                <image-point name="GroundCheck" x="0.5" y="1.004" />
+                                <collision-poly>
+                                    <point x="0.107143" y="0" />
+                                    <point x="0.878571" y="0" />
+                                    <point x="0.885714" y="1" />
+                                    <point x="0.114286" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="336266404548001" speed="0">
+                            <frame duration="2" hotspotX="0.5" hotspotY="0" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Character\Sprite-Jump.png">
+                                <image-point name="GroundCheck" x="0.5" y="1.004" />
+                                <collision-poly>
+                                    <point x="0.107143" y="0" />
+                                    <point x="0.878571" y="0" />
+                                    <point x="0.885714" y="1" />
+                                    <point x="0.114286" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Fall" pingpong="0" repeatcount="1" repeatto="0" sid="250511320016127" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Character\Sprite-Jump.png">
+                                <image-point name="GroundCheck" x="0.5" y="1.004" />
+                                <collision-poly>
+                                    <point x="0.107143" y="0" />
+                                    <point x="0.878571" y="0" />
+                                    <point x="0.885714" y="1" />
+                                    <point x="0.114286" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="GroundCheck" sid="865725068008753">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="670736330954800" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="LevelEnd">
+                <object-type name="LevelEnd" sid="843140529161352">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="683997065318136" speed="0">
+                            <frame duration="1" hotspotX="0.500376" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\UI\level-complete.png">
+                                <image-point name="Button 1" x="0.210368" y="0.929173" />
+                                <image-point name="Button 2" x="0.788881" y="0.929173" />
+                                <collision-poly>
+                                    <point x="0.130729" y="0.12202" />
+                                    <point x="0.499624" y="0.0617111" />
+                                    <point x="0.850488" y="0.139551" />
+                                    <point x="0.946657" y="0.5" />
+                                    <point x="0.945905" y="0.949509" />
+                                    <point x="0.499624" y="1" />
+                                    <point x="0.0540947" y="0.949509" />
+                                    <point x="0.0533434" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.500376" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\UI\level-failed.png">
+                                <image-point name="Button 1" x="0.210368" y="0.928876" />
+                                <image-point name="Button 2" x="0.788881" y="0.928876" />
+                                <collision-poly>
+                                    <point x="0.126972" y="0.120199" />
+                                    <point x="0.499624" y="0.0483642" />
+                                    <point x="0.865515" y="0.127312" />
+                                    <point x="0.946657" y="0.5" />
+                                    <point x="0.945905" y="0.948791" />
+                                    <point x="0.499624" y="1" />
+                                    <point x="0.0540947" y="0.948791" />
+                                    <point x="0.0533434" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="homebutton" sid="258803761356650">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="247942777624899" speed="5">
+                            <frame duration="1" hotspotX="0.501484" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\UI\home-button.png">
+                                <collision-poly>
+                                    <point x="0.074184" y="0.140449" />
+                                    <point x="0.498516" y="0" />
+                                    <point x="0.913947" y="0.162921" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.925816" y="0.859551" />
+                                    <point x="0.498516" y="0.994382" />
+                                    <point x="0.0860534" y="0.837079" />
+                                    <point x="0.00296736" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="RestartNextButton" sid="346398636872065">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="758889419730773" speed="0">
+                            <frame duration="1" hotspotX="0.501484" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\UI\next-button.png">
+                                <collision-poly>
+                                    <point x="0.074184" y="0.140449" />
+                                    <point x="0.498516" y="0" />
+                                    <point x="0.913947" y="0.162921" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.925816" y="0.859551" />
+                                    <point x="0.498516" y="0.994382" />
+                                    <point x="0.0860534" y="0.837079" />
+                                    <point x="0.00296736" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.501484" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\UI\restart-button.png">
+                                <collision-poly>
+                                    <point x="0.074184" y="0.140449" />
+                                    <point x="0.498516" y="0" />
+                                    <point x="0.913947" y="0.162921" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.925816" y="0.859551" />
+                                    <point x="0.498516" y="0.994382" />
+                                    <point x="0.0860534" y="0.837079" />
+                                    <point x="0.00296736" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Rintangan">
+                <object-type name="Lumpur" sid="580943890547014">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="803422373545645" speed="5">
+                            <frame duration="1" hotspotX="0.506024" hotspotY="0.435897" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Rintangan\Lumpur.png">
+                                <collision-poly>
+                                    <point x="0.0783133" y="0.166667" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.963855" y="0.0769231" />
+                                    <point x="0.903614" y="0.5" />
+                                    <point x="0.825301" y="0.628205" />
+                                    <point x="0.5" y="0.897436" />
+                                    <point x="0.277108" y="0.410256" />
+                                    <point x="0.138554" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="inforintangan" sid="446680495340715">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="JenisRintangan" sid="847503857333367" type="string" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="782650862522262" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Buang Sampah">
+                <object-type name="PilihSampah" sid="815472564224279">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="797308294873487" speed="5">
+                            <frame duration="1" hotspotX="0.500218" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\UI\Pilih-Sampah.png">
+                                <image-point name="Sampah 1" x="0.150458" y="0.5" />
+                                <image-point name="Sampah 2" x="0.322721" y="0.5" />
+                                <image-point name="Sampah 3" x="0.494985" y="0.5" />
+                                <image-point name="Sampah 4" x="0.67597" y="0.5" />
+                                <image-point name="Sampah 5" x="0.863498" y="0.5" />
+                                <image-point name="Tempat sampah" x="0.500218" y="1.43836" />
+                                <image-point name="Back" x="0.218055" y="1.43836" />
+                                <collision-poly>
+                                    <point x="0.00697776" y="0.0219178" />
+                                    <point x="0.499782" y="0" />
+                                    <point x="0.993022" y="0.0219178" />
+                                    <point x="0.993022" y="0.978082" />
+                                    <point x="0.499782" y="1" />
+                                    <point x="0.00697776" y="0.978082" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="SampahDiKantong" sid="505563859212532">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="item" sid="840078385489077" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="DragDrop" sid="926553859870827">
+                            <behavior id="DragnDrop" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="3" loop="0" name="Organik" pingpong="0" repeatcount="1" repeatto="0" sid="361676975708454" speed="0">
+                            <frame duration="1" hotspotX="0.508772" hotspotY="0.516129" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Sampah\Organik\Apel.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.52" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Sampah\Organik\Duri-Ikan.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.511628" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Sampah\Organik\Kulit Pisang.png" />
+                        </animation>
+                        <animation framecount="4" loop="0" name="Anorganik" pingpong="0" repeatcount="1" repeatto="0" sid="506649989530249" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.522727" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Sampah\Anorganik\Botol.png" />
+                            <frame duration="1" hotspotX="0.515625" hotspotY="0.52" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Sampah\Anorganik\Bungkus-Chiki.png" />
+                            <frame duration="1" hotspotX="0.507937" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Sampah\Anorganik\Kaleng.png" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.517241" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Sampah\Anorganik\Piring-Pecah.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="None" pingpong="0" repeatcount="1" repeatto="0" sid="358532642580727" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BtnTempatSampah" sid="958748604518958">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Organik" pingpong="0" repeatcount="1" repeatto="0" sid="415056981086417" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.504274" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Tempat Sampah\Trashbin.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Anorganik" pingpong="0" repeatcount="1" repeatto="0" sid="106850335251593" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.504274" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Tempat Sampah\Trashbin_Anorganic.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BlackScreen" sid="337549656888419">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="706623437817206" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="back" sid="931060308883948">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="742255058749931" speed="5">
+                            <frame duration="1" hotspotX="0.500662" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\Button\back.png">
+                                <collision-poly>
+                                    <point x="0.181457" y="0.240351" />
+                                    <point x="0.499338" y="0.192982" />
+                                    <point x="0.854305" y="0.192982" />
+                                    <point x="0.998676" y="0.5" />
+                                    <point x="0.854305" y="0.807018" />
+                                    <point x="0.499338" y="0.807018" />
+                                    <point x="0.181457" y="0.759649" />
+                                    <point x="0.0013245" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Sampah">
+                <object-type name="Sampah" sid="113902431925352">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Info" sid="117239251555699" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="3" loop="0" name="Organik" pingpong="0" repeatcount="1" repeatto="0" sid="421244251762101" speed="0">
+                            <frame duration="1" hotspotX="0.515625" hotspotY="0.515625" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Sampah\Organik\Apel.png">
+                                <collision-poly>
+                                    <point x="0.291904" y="0.241225" />
+                                    <point x="0.507813" y="0.188142" />
+                                    <point x="0.723721" y="0.241225" />
+                                    <point x="0.65625" y="0.493365" />
+                                    <point x="0.818182" y="0.85167" />
+                                    <point x="0.507813" y="0.971104" />
+                                    <point x="0.386363" y="0.665882" />
+                                    <point x="0.0894886" y="0.493365" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.515625" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Sampah\Organik\Duri-Ikan.png">
+                                <collision-poly>
+                                    <point x="0.0967742" y="0.410156" />
+                                    <point x="0.5" y="0.410156" />
+                                    <point x="0.854839" y="0.458984" />
+                                    <point x="0.967742" y="0.507813" />
+                                    <point x="0.5" y="0.507813" />
+                                    <point x="0.0645161" y="0.638021" />
+                                    <point x="0.016129" y="0.507813" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.515625" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Sampah\Organik\Kulit Pisang.png">
+                                <collision-poly>
+                                    <point x="0.230903" y="0.386875" />
+                                    <point x="0.5" y="0.41375" />
+                                    <point x="0.634549" y="0.52125" />
+                                    <point x="0.634549" y="0.494375" />
+                                    <point x="0.849826" y="0.709375" />
+                                    <point x="0.5" y="0.709375" />
+                                    <point x="0.177084" y="0.6825" />
+                                    <point x="0.257813" y="0.494375" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="0" name="Anorganik" pingpong="0" repeatcount="1" repeatto="0" sid="427411268210573" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.515625" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Sampah\Anorganik\Botol.png">
+                                <collision-poly>
+                                    <point x="0.161601" y="0.301682" />
+                                    <point x="0.493365" y="0.195913" />
+                                    <point x="0.878211" y="0.262019" />
+                                    <point x="0.971104" y="0.5" />
+                                    <point x="0.825128" y="0.685096" />
+                                    <point x="0.493365" y="0.764423" />
+                                    <point x="0.108519" y="0.751202" />
+                                    <point x="0.174872" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Sampah\Anorganik\Bungkus-Chiki.png">
+                                <collision-poly>
+                                    <point x="0.270492" y="0.383644" />
+                                    <point x="0.5" y="0.175864" />
+                                    <point x="0.795082" y="0.317154" />
+                                    <point x="0.934426" y="0.5" />
+                                    <point x="0.942623" y="0.832447" />
+                                    <point x="0.5" y="0.865691" />
+                                    <point x="0.131148" y="0.757646" />
+                                    <point x="0.0245902" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.515625" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Sampah\Anorganik\Kaleng.png">
+                                <collision-poly>
+                                    <point x="0.0976562" y="0.144531" />
+                                    <point x="0.507813" y="0.28125" />
+                                    <point x="0.671875" y="0.390625" />
+                                    <point x="0.917969" y="0.5" />
+                                    <point x="0.917969" y="0.855469" />
+                                    <point x="0.507813" y="0.828125" />
+                                    <point x="0.179688" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.515625" hotspotY="0.515625" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Sampah\Anorganik\Piring-Pecah.png">
+                                <collision-poly>
+                                    <point x="0.0967742" y="0.381944" />
+                                    <point x="0.5" y="0.28125" />
+                                    <point x="0.887097" y="0.398727" />
+                                    <point x="0.870968" y="0.499421" />
+                                    <point x="0.806452" y="0.532986" />
+                                    <point x="0.5" y="0.734375" />
+                                    <point x="0.0967742" y="0.633681" />
+                                    <point x="0" y="0.499421" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TempatSampah" sid="206976327549782">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Organik" pingpong="0" repeatcount="1" repeatto="0" sid="609869400241510" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.504274" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Tempat Sampah\Trashbin.png">
+                                <collision-poly>
+                                    <point x="0.00877193" y="0.00854701" />
+                                    <point x="0.991228" y="0.00854701" />
+                                    <point x="0.894737" y="0.495726" />
+                                    <point x="0.850877" y="0.854701" />
+                                    <point x="0.5" y="0.982906" />
+                                    <point x="0.149123" y="0.854701" />
+                                    <point x="0.105263" y="0.495726" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Anorganik" pingpong="0" repeatcount="1" repeatto="0" sid="267393577384160" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.504274" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Tempat Sampah\Trashbin_Anorganic.png">
+                                <collision-poly>
+                                    <point x="0.00877193" y="0.00854701" />
+                                    <point x="0.991228" y="0.00854701" />
+                                    <point x="0.894737" y="0.495726" />
+                                    <point x="0.850877" y="0.854701" />
+                                    <point x="0.5" y="0.982906" />
+                                    <point x="0.149123" y="0.854701" />
+                                    <point x="0.105263" y="0.495726" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Pause">
+                <object-type name="PauseWall" sid="105163054559879">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="769410331956497" speed="5">
+                            <frame duration="1" hotspotX="0.500376" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\UI\pause.png">
+                                <image-point name="Button 1" x="0.157776" y="0.929752" />
+                                <image-point name="Button 2" x="0.500376" y="0.929752" />
+                                <image-point name="Button 3" x="0.841473" y="0.929752" />
+                                <image-point name="Misi 1" x="0.500376" y="0.5" />
+                                <image-point name="Misi 2" x="0.500376" y="0.619835" />
+                                <collision-poly>
+                                    <point x="0.138242" y="0.126722" />
+                                    <point x="0.499624" y="0.0647383" />
+                                    <point x="0.837716" y="0.14876" />
+                                    <point x="0.946657" y="0.5" />
+                                    <point x="0.945905" y="0.950413" />
+                                    <point x="0.499624" y="1" />
+                                    <point x="0.0540947" y="0.950413" />
+                                    <point x="0.0533434" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="homepause" sid="353458171198313">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="316121552813421" speed="5">
+                            <frame duration="1" hotspotX="0.501416" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\UI\home-pause.png">
+                                <collision-poly>
+                                    <point x="0.0708215" y="0.100806" />
+                                    <point x="0.498584" y="0.00403226" />
+                                    <point x="0.917847" y="0.116935" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.929178" y="0.899194" />
+                                    <point x="0.498584" y="0.995968" />
+                                    <point x="0.082153" y="0.883065" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="RestartPause" sid="378807412243328">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="498743977769408" speed="5">
+                            <frame duration="1" hotspotX="0.501416" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\UI\restart-pause.png">
+                                <collision-poly>
+                                    <point x="0.0708215" y="0.100806" />
+                                    <point x="0.498584" y="0.00403226" />
+                                    <point x="0.917847" y="0.116935" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.929178" y="0.899194" />
+                                    <point x="0.498584" y="0.995968" />
+                                    <point x="0.082153" y="0.883065" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="PlayPause" sid="666445503543341">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="437084611487696" speed="5">
+                            <frame duration="1" hotspotX="0.501416" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\UI\play.png">
+                                <collision-poly>
+                                    <point x="0.0708215" y="0.100806" />
+                                    <point x="0.498584" y="0.00403226" />
+                                    <point x="0.917847" y="0.116935" />
+                                    <point x="1" y="0.5" />
+                                    <point x="0.929178" y="0.899194" />
+                                    <point x="0.498584" y="0.995968" />
+                                    <point x="0.082153" y="0.883065" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Misi1" sid="117054873259013">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type name="Misi2" sid="978359571109745">
+                    <plugin id="Text" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Info Sampah">
+                <object-type name="InfoBox" sid="748580899591982">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="item" sid="429750722284865" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="3" loop="0" name="Organik" pingpong="0" repeatcount="1" repeatto="0" sid="401330916850071" speed="0">
+                            <frame duration="1" hotspotX="0.508744" hotspotY="0.516256" original-source="E:\Project\New Tackle Flooding\Assets\Info\apel.png">
+                                <collision-poly>
+                                    <point x="0.28125" y="0.257143" />
+                                    <point x="0.5" y="0.171429" />
+                                    <point x="0.75" y="0.228571" />
+                                    <point x="0.6875" y="0.485714" />
+                                    <point x="0.84375" y="0.857143" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.34375" y="0.685714" />
+                                    <point x="0.03125" y="0.485714" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.500265" hotspotY="0.520197" original-source="E:\Project\New Tackle Flooding\Assets\Info\duri-ikan.png">
+                                <collision-poly>
+                                    <point x="0.0967742" y="0.25" />
+                                    <point x="0.5" y="0.25" />
+                                    <point x="0.854839" y="0.375" />
+                                    <point x="0.967742" y="0.5" />
+                                    <point x="0.5" y="0.5" />
+                                    <point x="0.0645161" y="0.833333" />
+                                    <point x="0.016129" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.500265" hotspotY="0.51133" original-source="E:\Project\New Tackle Flooding\Assets\Info\kulit-pisang.png">
+                                <collision-poly>
+                                    <point x="0.222222" y="0.32" />
+                                    <point x="0.5" y="0.36" />
+                                    <point x="0.638889" y="0.52" />
+                                    <point x="0.638889" y="0.48" />
+                                    <point x="0.861111" y="0.8" />
+                                    <point x="0.5" y="0.8" />
+                                    <point x="0.166667" y="0.76" />
+                                    <point x="0.25" y="0.48" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="4" loop="0" name="Anorganik" pingpong="0" repeatcount="1" repeatto="0" sid="292927712646736" speed="0">
+                            <frame duration="1" hotspotX="0.500265" hotspotY="0.523153" original-source="E:\Project\New Tackle Flooding\Assets\Info\botol-bekas.png">
+                                <collision-poly>
+                                    <point x="0.271186" y="0.355556" />
+                                    <point x="0.491525" y="0.0666667" />
+                                    <point x="0.79661" y="0.266667" />
+                                    <point x="0.932203" y="0.488889" />
+                                    <point x="0.932203" y="0.911111" />
+                                    <point x="0.491525" y="0.955556" />
+                                    <point x="0.135593" y="0.822222" />
+                                    <point x="0.0169492" y="0.488889" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.515633" hotspotY="0.520197" original-source="E:\Project\New Tackle Flooding\Assets\Info\bungkus-jajan.png">
+                                <collision-poly>
+                                    <point x="0.271186" y="0.355556" />
+                                    <point x="0.491525" y="0.0666667" />
+                                    <point x="0.79661" y="0.266667" />
+                                    <point x="0.932203" y="0.488889" />
+                                    <point x="0.932203" y="0.911111" />
+                                    <point x="0.491525" y="0.955556" />
+                                    <point x="0.135593" y="0.822222" />
+                                    <point x="0.0169492" y="0.488889" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.507684" hotspotY="0.500493" original-source="E:\Project\New Tackle Flooding\Assets\Info\kaleng-bekas.png">
+                                <collision-poly>
+                                    <point x="0.0833333" y="0.09375" />
+                                    <point x="0.5" y="0.25" />
+                                    <point x="0.666667" y="0.375" />
+                                    <point x="0.916667" y="0.5" />
+                                    <point x="0.916667" y="0.90625" />
+                                    <point x="0.5" y="0.875" />
+                                    <point x="0.166667" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.500265" hotspotY="0.517241" original-source="E:\Project\New Tackle Flooding\Assets\Info\piring-pecah.png">
+                                <collision-poly>
+                                    <point x="0.0967742" y="0.222222" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.887097" y="0.259259" />
+                                    <point x="0.870968" y="0.481481" />
+                                    <point x="0.806452" y="0.555556" />
+                                    <point x="0.5" y="1" />
+                                    <point x="0.0967742" y="0.777778" />
+                                    <point x="0" y="0.481481" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Misi" pingpong="0" repeatcount="1" repeatto="0" sid="399976341245045" speed="0">
+                            <frame duration="1" hotspotX="0.500265" hotspotY="0.500493" original-source="E:\Project\New Tackle Flooding\Assets\Info\misi-1.png">
+                                <collision-poly>
+                                    <point x="0.00900901" y="0.0167488" />
+                                    <point x="0.499735" y="0.000985222" />
+                                    <point x="0.990991" y="0.0167488" />
+                                    <point x="0.990991" y="0.983251" />
+                                    <point x="0.499735" y="0.999015" />
+                                    <point x="0.00900901" y="0.983251" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Rintangan" pingpong="0" repeatcount="1" repeatto="0" sid="316077702528604" speed="5">
+                            <frame duration="1" hotspotX="0.500265" hotspotY="0.500493" original-source="E:\Project\New Tackle Flooding\Assets\Info\tutor-lumpur.png">
+                                <collision-poly>
+                                    <point x="0.00900901" y="0.0167488" />
+                                    <point x="0.499735" y="0.000985222" />
+                                    <point x="0.990991" y="0.0167488" />
+                                    <point x="0.990991" y="0.983251" />
+                                    <point x="0.499735" y="0.999015" />
+                                    <point x="0.00900901" y="0.983251" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BlackScreenInfo" sid="120307756458060">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="156699323277178" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="kembalitext" sid="339273939064138">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="371882970239448" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\Info\kembalitext.png">
+                                <collision-poly>
+                                    <point x="0.0578125" y="0.393617" />
+                                    <point x="0.5" y="0.531915" />
+                                    <point x="0.954687" y="0.308511" />
+                                    <point x="0.99375" y="0.5" />
+                                    <point x="0.978125" y="0.851064" />
+                                    <point x="0.5" y="0.659574" />
+                                    <point x="0.021875" y="0.851064" />
+                                    <point x="0.0078125" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Rain">
+                <object-type name="raindrop" sid="741253969664158">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Bullet" sid="703019395654354">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="181054287511528" speed="5">
+                            <frame duration="1" hotspotX="0.533333" hotspotY="0.5" original-source="E:\Rain Effect_PNG\PNG\Raindrop.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Splash" sid="888680350184057">
+                    <plugin id="Particles" />
+                    <texture original-source="E:\Rain Effect_PNG\PNG\Splash.png" />
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-folder name="Loader">
+            <object-type name="LoaderBackground" sid="787416001695466">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="828587738100410">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="208930167213267" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CharaLoader" sid="495486510587399">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="273726938252700">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="865389894580931" speed="4">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Character\Sprite-Walk.png">
+                            <image-point name="LoadingText" x="0.5" y="1.06" />
+                            <collision-poly>
+                                <point x="0.107143" y="0" />
+                                <point x="0.878571" y="0" />
+                                <point x="0.885714" y="1" />
+                                <point x="0.114286" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Character\Sprite-Walk.png">
+                            <image-point name="LoadingText" x="0.5" y="1.06" />
+                            <collision-poly>
+                                <point x="0.107143" y="0" />
+                                <point x="0.878571" y="0" />
+                                <point x="0.885714" y="1" />
+                                <point x="0.114286" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="LoadingText" x="0.5" y="1.06" />
+                            <collision-poly>
+                                <point x="0.107143" y="0" />
+                                <point x="0.878571" y="0" />
+                                <point x="0.885714" y="1" />
+                                <point x="0.114286" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Project\New Tackle Flooding\Assets\In-Game\Character\Sprite-Walk.png">
+                            <image-point name="LoadingText" x="0.5" y="1.06" />
+                            <collision-poly>
+                                <point x="0.107143" y="0" />
+                                <point x="0.878571" y="0" />
+                                <point x="0.885714" y="1" />
+                                <point x="0.114286" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LoaderText" sid="299371692288435">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="576761915191296">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664315990697198" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="E:\Project\New Tackle Flooding\Assets\Loader\loadertext.png">
+                            <collision-poly>
+                                <point x="0.0278884" y="0.132075" />
+                                <point x="0.498008" y="0.0377358" />
+                                <point x="0.98008" y="0.0943396" />
+                                <point x="0.900398" y="0.490566" />
+                                <point x="0.968127" y="0.849057" />
+                                <point x="0.498008" y="1" />
+                                <point x="0.0159363" y="0.924528" />
+                                <point x="0.0119522" y="0.490566" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+    </object-folder>
+    <families>
+        <family name="Controller" plugin-id="Sprite" sid="398727628913128">
+            <members>
+                <member>arrow</member>
+                <member>interact</member>
+            </members>
+        </family>
+        <family name="MainMenuButton" plugin-id="Sprite" sid="643198528907307">
+            <members>
+                <member>creditButton</member>
+                <member>playButton</member>
+            </members>
+            <effects>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+            </effects>
+        </family>
+        <family name="InPauseButton" plugin-id="Sprite" sid="622623779928923">
+            <members>
+                <member>homepause</member>
+                <member>PlayPause</member>
+                <member>RestartPause</member>
+            </members>
+            <effects>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+            </effects>
+        </family>
+        <family name="LevelEndButton" plugin-id="Sprite" sid="713346747874467">
+            <members>
+                <member>homebutton</member>
+                <member>RestartNextButton</member>
+            </members>
+            <effects>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+            </effects>
+        </family>
+        <family name="InfoDesc" plugin-id="Sprite" sid="655088897308985">
+            <members>
+                <member>BlackScreenInfo</member>
+                <member>InfoBox</member>
+                <member>kembalitext</member>
+            </members>
+            <behaviors>
+                <behavior-type name="LiteTween" sid="234195488503260">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="BuangSampah" plugin-id="Sprite" sid="513600701191376">
+            <members>
+                <member>back</member>
+                <member>BlackScreen</member>
+                <member>BtnTempatSampah</member>
+                <member>PilihSampah</member>
+                <member>SampahDiKantong</member>
+            </members>
+            <behaviors>
+                <behavior-type name="LiteTween" sid="195645513643816">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Main_Menu.xml</layout>
+        <layout>Level_1.xml</layout>
+        <layout>Splash.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Level.xml</event-sheet>
+        <event-sheet>Main_Menu.xml</event-sheet>
+        <event-sheet>Splash.xml</event-sheet>
+        <event-sheet>Loader.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="28">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="29" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

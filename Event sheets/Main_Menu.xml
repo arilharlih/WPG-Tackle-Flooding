@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Main_Menu</name>
+    <events>
+        <include>Loader</include>
+        <variable constant="0" name="Menu" sid="689022689854839" static="0" type="text">MainMenu</variable>
+        <event-block sid="781272094965220">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="639017135437432" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="440365702996173" type="Function">
+                    <param id="0" name="Name">&quot;Loader-Out&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="147517069090318">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="227267695603371" type="System">
+                            <param id="0" name="Variable">Menu</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;MainMenu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="512400026107876" type="System">
+                            <param id="0" name="Seconds">1.8</param>
+                        </action>
+                        <action id="0" name="Call function" sid="854013573042814" type="Function">
+                            <param id="0" name="Name">&quot;MainMenu-IN&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="564129315848149">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="139591097995145" type="System">
+                            <param id="0" name="Variable">Menu</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;PilihLevel&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="265977095456343" type="System">
+                            <param id="0" name="Seconds">1.8</param>
+                        </action>
+                        <action id="0" name="Call function" sid="926470337950825" type="Function">
+                            <param id="0" name="Name">&quot;PilihLevel-IN&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="543877342612040">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="145874976275452" type="System">
+                            <param id="0" name="Variable">Menu</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Credit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="186517208279104">
+            <conditions>
+                <condition id="0" name="On function" sid="750769328356800" type="Function">
+                    <param id="0" name="Name">&quot;RespMainMenu&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="470237065304123">
+                    <conditions />
+                    <actions>
+                        <action id="-7" name="Set size" sid="149422620644595" type="MainMenuBox">
+                            <param id="0" name="Width">ViewportRight(&quot;Main Menu&quot;) - ViewportLeft(&quot;Main Menu&quot;)</param>
+                            <param id="1" name="Height">ViewportBottom(&quot;Main Menu&quot;) - ViewportTop(&quot;Main Menu&quot;)</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="797417641834095" type="playButton">
+                            <param id="0" name="Object">MainMenuBox</param>
+                            <param id="1" name="Image point (optional)">&quot;ButtonPlay&quot;</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="656101863921678" type="creditButton">
+                            <param id="0" name="Object">MainMenuBox</param>
+                            <param id="1" name="Image point (optional)">&quot;ButtonCredit&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="752482566171869">
+            <conditions>
+                <condition id="0" name="On function" sid="558455242123992" type="Function">
+                    <param id="0" name="Name">&quot;RespPilihLevel&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="127786425495217">
+                    <conditions />
+                    <actions>
+                        <action id="-7" name="Set size" sid="844259498729008" type="PilihLevelBox">
+                            <param id="0" name="Width">ViewportRight(&quot;Pilih Level&quot;) - ViewportLeft(&quot;Pilih Level&quot;)</param>
+                            <param id="1" name="Height">ViewportBottom(&quot;Pilih Level&quot;) - ViewportTop(&quot;Pilih Level&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="497758384280895">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="279650416089748" type="level">
+                            <param id="0" name="Instance variable">level_id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="525447195773217" type="level">
+                            <param id="0" name="Object">PilihLevelBox</param>
+                            <param id="1" name="Image point (optional)">&quot;Level 1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="680490234665813">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="929056900907533" type="level">
+                            <param id="0" name="Instance variable">level_id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="668577773295542" type="level">
+                            <param id="0" name="Object">PilihLevelBox</param>
+                            <param id="1" name="Image point (optional)">&quot;Level 2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="413139242643104">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="752855816017192" type="level">
+                            <param id="0" name="Instance variable">level_id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="803785996325409" type="level">
+                            <param id="0" name="Object">PilihLevelBox</param>
+                            <param id="1" name="Image point (optional)">&quot;Level 3&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="805787286590949">
+            <conditions>
+                <condition id="0" name="On function" sid="751228192297998" type="Function">
+                    <param id="0" name="Name">&quot;MainMenu-IN&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="812161269019602" type="System">
+                    <param id="0" name="Group name">&quot;Main Menu&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="378749159719780">
+                    <conditions />
+                    <actions>
+                        <action id="-7" name="Set size" sid="379534189832239" type="playButton">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="523971951975926" type="creditButton">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="5" name="Set easing" sid="492475350974738" type="playButton">
+                            <param id="0" name="Function">20</param>
+                        </action>
+                        <action behavior="LiteTween" id="5" name="Set easing" sid="250364810742816" type="creditButton">
+                            <param id="0" name="Function">20</param>
+                        </action>
+                        <action behavior="LiteTween" id="1" name="Set duration" sid="274393004462909" type="playButton">
+                            <param id="0" name="Duration">2</param>
+                        </action>
+                        <action behavior="LiteTween" id="1" name="Set duration" sid="893870763909683" type="creditButton">
+                            <param id="0" name="Duration">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="312218563839465">
+                    <conditions />
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="834825945780732" type="playButton">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="347281786259072" type="playButton">
+                            <param id="0" name="Target is">4</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">434.105</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="130655314732433" type="playButton">
+                            <param id="0" name="Target is">5</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">292.89</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="737377947615877" type="creditButton">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="102251249181474" type="creditButton">
+                            <param id="0" name="Target is">4</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">434.105</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="660680100309451" type="creditButton">
+                            <param id="0" name="Target is">5</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">292.89</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="602360881714157">
+            <conditions>
+                <condition id="0" name="On function" sid="966760740562520" type="Function">
+                    <param id="0" name="Name">&quot;MainMenu-OUT&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="832565649185080" type="System">
+                    <param id="0" name="Group name">&quot;Main Menu&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="971579888862855">
+                    <conditions />
+                    <actions>
+                        <action id="-7" name="Set size" sid="770065370465061" type="playButton">
+                            <param id="0" name="Width">434.105</param>
+                            <param id="1" name="Height">292.89</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="261736011506638" type="creditButton">
+                            <param id="0" name="Width">434.105</param>
+                            <param id="1" name="Height">292.89</param>
+                        </action>
+                        <action behavior="LiteTween" id="5" name="Set easing" sid="350096609760839" type="playButton">
+                            <param id="0" name="Function">8</param>
+                        </action>
+                        <action behavior="LiteTween" id="5" name="Set easing" sid="857969126295111" type="creditButton">
+                            <param id="0" name="Function">8</param>
+                        </action>
+                        <action behavior="LiteTween" id="1" name="Set duration" sid="996269733641574" type="playButton">
+                            <param id="0" name="Duration">0.8</param>
+                        </action>
+                        <action behavior="LiteTween" id="1" name="Set duration" sid="584864813948800" type="creditButton">
+                            <param id="0" name="Duration">0.8</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="344909690961146">
+                    <conditions />
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="551189558388962" type="playButton">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="586562964132636" type="playButton">
+                            <param id="0" name="Target is">4</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="922086262121941" type="playButton">
+                            <param id="0" name="Target is">5</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="733728596259455" type="creditButton">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="460605881712764" type="creditButton">
+                            <param id="0" name="Target is">4</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="922606161604630" type="creditButton">
+                            <param id="0" name="Target is">5</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="372568896420274">
+            <conditions>
+                <condition id="0" name="On function" sid="916138720442875" type="Function">
+                    <param id="0" name="Name">&quot;PilihLevel-IN&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="419268251198334" type="System">
+                    <param id="0" name="Group name">&quot;Pilih Level&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="143019957719997">
+                    <conditions />
+                    <actions>
+                        <action id="-7" name="Set size" sid="728761246830191" type="level">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="1" name="Set duration" sid="792943972769126" type="level">
+                            <param id="0" name="Duration">2</param>
+                        </action>
+                        <action behavior="LiteTween" id="5" name="Set easing" sid="334736290862331" type="level">
+                            <param id="0" name="Function">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="631320383455157">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="148114660412755" type="System">
+                            <param id="0" name="Object">level</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="718188919503698">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="571376582445972" type="level">
+                                    <param id="0" name="Instance variable">level_id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">loopindex + 1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="786587981748682" type="System">
+                                    <param id="0" name="Seconds">0.2 * loopindex</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="356936374018373" type="level">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">0</param>
+                                </action>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="964735406059902" type="level">
+                                    <param id="0" name="Target is">4</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">219.941</param>
+                                </action>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="505604668619674" type="level">
+                                    <param id="0" name="Target is">5</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">220.127</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="474391966310288">
+            <conditions>
+                <condition id="0" name="On function" sid="409370285911975" type="Function">
+                    <param id="0" name="Name">&quot;PilihLevel-OUT&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="126632461917532" type="System">
+                    <param id="0" name="Group name">&quot;Pilih Level&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="605472565280824">
+                    <conditions />
+                    <actions>
+                        <action id="-7" name="Set size" sid="138220084757055" type="level">
+                            <param id="0" name="Width">219.941</param>
+                            <param id="1" name="Height">220.127</param>
+                        </action>
+                        <action behavior="LiteTween" id="1" name="Set duration" sid="669734418239767" type="level">
+                            <param id="0" name="Duration">1</param>
+                        </action>
+                        <action behavior="LiteTween" id="5" name="Set easing" sid="690872203306053" type="level">
+                            <param id="0" name="Function">8</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="151422913034730">
+                    <conditions />
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="969574579582203" type="level">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="581412800128013" type="level">
+                            <param id="0" name="Target is">4</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="177990741411043" type="level">
+                            <param id="0" name="Target is">5</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="240936468078382">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="611047912927126" type="System" />
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="940415387410939" type="background">
+                    <param id="0" name="Width">ViewportRight(&quot;Background&quot;) - ViewportLeft(&quot;Background&quot;)</param>
+                    <param id="1" name="Height">ViewportBottom(&quot;Background&quot;) - ViewportTop(&quot;Background&quot;)</param>
+                </action>
+                <action id="0" name="Call function" sid="287142971385541" type="Function">
+                    <param id="0" name="Name">&quot;RespMainMenu&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="485858630955077" type="Function">
+                    <param id="0" name="Name">&quot;RespPilihLevel&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="667573082973288" title="Main Menu">
+            <sub-events>
+                <event-block sid="569855980495821">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="349281429668326" type="Touch">
+                            <param id="0" name="Object">playButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="191366773045018" type="Function">
+                            <param id="0" name="Name">&quot;MainMenu-OUT&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="430849839258501" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="0" name="Call function" sid="112633278949419" type="Function">
+                            <param id="0" name="Name">&quot;PilihLevel-IN&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="971288114980582">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="195917720142762" type="Touch">
+                            <param id="0" name="Object">MainMenuButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="770208716437811" type="MainMenuButton">
+                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">80</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="434241587635612">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is touching object" sid="941604739735100" type="Touch">
+                            <param id="0" name="Object">MainMenuButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="726626345658218" type="MainMenuButton">
+                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="385518972371403" title="Pilih Level">
+            <sub-events>
+                <event-block sid="928521613098064">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="525215562969983" type="Touch">
+                            <param id="0" name="Object">level</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="774233896488110">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="368627771693655" type="level">
+                                    <param id="0" name="Instance variable">level_id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="310341096730287" type="System">
+                                    <param id="0" name="Group name">&quot;Button&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="436532925012267" type="Function">
+                                    <param id="0" name="Name">&quot;PilihLevel-OUT&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="216201873589394" type="Function">
+                                    <param id="0" name="Name">&quot;Loader-In&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="573970935452175" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="717520487060494" type="System">
+                                    <param id="0" name="Variable">MAXTIMER</param>
+                                    <param id="1" name="Value">60</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="526326807087044" type="System">
+                                    <param id="0" name="Variable">TotalSampah</param>
+                                    <param id="1" name="Value">7</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="551454032161065" type="System">
+                                    <param id="0" name="Layout">Level_1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="223334044835379">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="313513021760912" type="Touch">
+                            <param id="0" name="Object">level</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="182497471045785" type="level">
+                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">95</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="810094359811822">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is touching object" sid="352525368836792" type="Touch">
+                            <param id="0" name="Object">level</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="190726837351169" type="level">
+                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
