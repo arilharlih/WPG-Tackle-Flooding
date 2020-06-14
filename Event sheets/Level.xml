@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Level</name>
     <events>
+        <variable constant="0" name="Level_Sekarang" sid="596907042577272" static="0" type="number">0</variable>
         <include>Loader</include>
         <event-block sid="351329396141935">
             <conditions>
@@ -10,6 +11,10 @@
             </conditions>
             <actions>
                 <action id="-24" name="Move to top" sid="641037724951445" type="Player" />
+                <action id="5" name="Set web font" sid="754427150496367" type="InGameText">
+                    <param id="0" name="Family name">&quot;motion_controlbold&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
                 <action id="-4" name="Set layer visible" sid="696776349563637" type="System">
                     <param id="0" name="Layer">&quot;UI&quot;</param>
                     <param id="1" name="Visibility">1</param>
@@ -34,6 +39,16 @@
                     <param id="0" name="Group name">&quot;Level End&quot;</param>
                     <param id="1" name="State">0</param>
                 </action>
+                <action id="-9" name="Set value" sid="423079791837043" type="System">
+                    <param id="0" name="Variable">TotalSampah</param>
+                    <param id="1" name="Value">Sampah.Count</param>
+                </action>
+                <action id="0" name="Play" sid="312032956976972" type="Audio">
+                    <param id="0" name="Audio file">music-background</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-8</param>
+                    <param id="1" name="Tag (optional)">&quot;bg-music-ingame&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="424801377176803">
@@ -54,7 +69,7 @@
                 </action>
                 <action id="0" name="Call function" sid="405346033842523" type="Function">
                     <param id="0" name="Name">&quot;INFO-IN&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Misi&quot;{###}0</param>
+                    <param id="1" name="Parameter {n}">&quot;Misi&quot;{###}Level_Sekarang</param>
                 </action>
             </actions>
         </event-block>
@@ -112,9 +127,20 @@
                     <param id="0" name="Group name">&quot;Controller&quot;</param>
                     <param id="1" name="State">0</param>
                 </action>
+                <action id="-12" name="Set group active" sid="718192371944125" type="System">
+                    <param id="0" name="Group name">&quot;Rain&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
                 <action id="-14" name="Set object time scale" sid="193016169867354" type="System">
                     <param id="0" name="Object">Player</param>
                     <param id="1" name="Time scale">0</param>
+                </action>
+                <action id="-14" name="Set object time scale" sid="996216992654696" type="System">
+                    <param id="0" name="Object">Tikus</param>
+                    <param id="1" name="Time scale">0</param>
+                </action>
+                <action id="6" name="Stop" sid="820015638238758" type="Audio">
+                    <param id="0" name="Tag">&quot;Walk&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -133,8 +159,16 @@
                     <param id="0" name="Group name">&quot;Controller&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
+                <action id="-12" name="Set group active" sid="483139086718138" type="System">
+                    <param id="0" name="Group name">&quot;Rain&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
                 <action id="-14" name="Set object time scale" sid="433035624785558" type="System">
                     <param id="0" name="Object">Player</param>
+                    <param id="1" name="Time scale">1</param>
+                </action>
+                <action id="-14" name="Set object time scale" sid="603705838452868" type="System">
+                    <param id="0" name="Object">Tikus</param>
                     <param id="1" name="Time scale">1</param>
                 </action>
             </actions>
@@ -229,40 +263,7 @@
             <conditions>
                 <condition id="-1" name="Every tick" sid="204936582872400" type="System" />
             </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="947300803677484" type="PilihSampah">
-                    <param id="0" name="X">(ViewportRight(&quot;Buang Sampah&quot;) + ViewportLeft(&quot;Buang Sampah&quot;)) / 2</param>
-                    <param id="1" name="Y">ViewportTop(&quot;Buang Sampah&quot;) + 250</param>
-                </action>
-                <action id="-4" name="Set position to another object" sid="716242587797294" type="BtnTempatSampah">
-                    <param id="0" name="Object">PilihSampah</param>
-                    <param id="1" name="Image point (optional)">&quot;Tempat Sampah&quot;</param>
-                </action>
-                <action id="-4" name="Set position to another object" sid="921703393100639" type="back">
-                    <param id="0" name="Object">PilihSampah</param>
-                    <param id="1" name="Image point (optional)">&quot;Back&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>Level End -- Tata Letak</comment>
-        <event-block sid="412044546511848">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="536880054202058" type="System" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="714944219960655" type="LevelEnd">
-                    <param id="0" name="X">(ViewportRight(&quot;End&quot;) + ViewportLeft(&quot;End&quot;)) / 2</param>
-                    <param id="1" name="Y">ViewportBottom(&quot;End&quot;) / 2 + ViewportTop(&quot;End&quot;)</param>
-                </action>
-                <action id="-4" name="Set position to another object" sid="126909498962083" type="homebutton">
-                    <param id="0" name="Object">LevelEnd</param>
-                    <param id="1" name="Image point (optional)">&quot;Button 1&quot;</param>
-                </action>
-                <action id="-4" name="Set position to another object" sid="714017862637704" type="RestartNextButton">
-                    <param id="0" name="Object">LevelEnd</param>
-                    <param id="1" name="Image point (optional)">&quot;Button 2&quot;</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
         <comment>Pause -- Tata Letak</comment>
         <event-block sid="942426711700219">
@@ -323,6 +324,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="322530031635531" type="Audio">
+                            <param id="0" name="Audio file">Button-click-1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-12" name="Set group active" sid="218870315145617" type="System">
                             <param id="0" name="Group name">&quot;Pause&quot;</param>
                             <param id="1" name="State">1</param>
@@ -338,6 +345,34 @@
                         <action id="0" name="Call function" sid="744569815536734" type="Function">
                             <param id="0" name="Name">&quot;Pause&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="550297929031546">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="684397550891750" type="System">
+                            <param id="0" name="First value">Player.Platform.VectorX</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="295096069387898" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="418240943045723">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="428525014357020" type="System">
+                            <param id="0" name="First value">Player.Platform.VectorX</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="130449603234591" type="Player">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -361,9 +396,6 @@
                                 <action behavior="Platform" id="7" name="Simulate control" sid="243764952448373" type="Player">
                                     <param id="0" name="Control">1</param>
                                 </action>
-                                <action id="7" name="Set mirrored" sid="551384817317995" type="Player">
-                                    <param id="0" name="State">1</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="225951620917608">
@@ -377,9 +409,6 @@
                             <actions>
                                 <action behavior="Platform" id="7" name="Simulate control" sid="913613425031436" type="Player">
                                     <param id="0" name="Control">0</param>
-                                </action>
-                                <action id="7" name="Set mirrored" sid="673408386949161" type="Player">
-                                    <param id="0" name="State">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -446,6 +475,63 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="988247590876798">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="934672815280175" type="Player" />
+                        <condition behavior="Platform" id="0" name="Is moving" sid="651529338673503" type="Player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="325892340423892">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="580596963492592" type="Player">
+                                    <param id="0" name="Object">Lumpur</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="176418316043673">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="646822363982816" type="System">
+                                            <param id="0" name="Interval (seconds)">0.6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="424055676059363" type="Audio">
+                                            <param id="0" name="Audio file">Walk</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-22</param>
+                                            <param id="1" name="Tag (optional)">&quot;Walk&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="852390429248443">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="912957341926215" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="688481658736608">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="994295030823817" type="System">
+                                            <param id="0" name="Interval (seconds)">0.37</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="682843214727113" type="Audio">
+                                            <param id="0" name="Audio file">Walk</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-22</param>
+                                            <param id="1" name="Tag (optional)">&quot;Walk&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="774385370207969">
                     <conditions>
                         <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="434344127024847" type="Player" />
@@ -465,6 +551,12 @@
                         <action id="4" name="Set animation" sid="501874171096964" type="Player">
                             <param id="0" name="Animation">&quot;Jump&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="462058194844603" type="Audio">
+                            <param id="0" name="Audio file">jumping</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -496,14 +588,6 @@
                         <action id="-4" name="Set position to another object" sid="178663174534630" type="SampahDiKantong">
                             <param id="0" name="Object">PilihSampah</param>
                             <param id="1" name="Image point (optional)">SampahDiKantong.item</param>
-                        </action>
-                        <action id="0" name="Call function" sid="466268948560665" type="Function">
-                            <param id="0" name="Name">&quot;Pause&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="702541399589017" type="System">
-                            <param id="0" name="Layer">&quot;UI&quot;</param>
-                            <param id="1" name="Visibility">0</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="309776652922423" type="System">
                             <param id="0" name="Layer">&quot;Buang Sampah&quot;</param>
@@ -610,6 +694,12 @@
                 <action id="0" name="Call function" sid="187672714360632" type="Function">
                     <param id="0" name="Name">&quot;AmbilSampah&quot;</param>
                     <param id="1" name="Parameter {n}">Sampah.AnimationName{###}Sampah.AnimationFrame</param>
+                </action>
+                <action id="0" name="Play" sid="222410537514928" type="Audio">
+                    <param id="0" name="Audio file">pickup-sampah</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;ambil-sampah&quot;</param>
                 </action>
             </actions>
             <sub-events>
@@ -784,6 +874,12 @@
                                     <param id="0" name="Variable">ProgressSampah</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Play" sid="741696029638333" type="Audio">
+                                    <param id="0" name="Audio file">buang-sampah</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;buang-sampah&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="204133018145121">
@@ -830,6 +926,34 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="768990808401225">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="339082143109028" type="Touch">
+                            <param id="0" name="Object">back</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="581673319331977" type="back">
+                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">95</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="366655800820310">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is touching object" sid="196884737381815" type="Touch">
+                            <param id="0" name="Object">back</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="459709136929624" type="back">
+                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <comment>Rintangan</comment>
@@ -861,8 +985,111 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="141529904594446">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="412614795929386" type="System" />
+            </conditions>
+            <actions>
+                <action id="-24" name="Move to top" sid="144353928182112" type="Tikus" />
+            </actions>
+            <sub-events>
+                <event-block sid="953481406124470">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="201693962084861" type="System">
+                            <param id="0" name="Value">Tikus.Sine.Value</param>
+                            <param id="1" name="Lower bound">Tikus.Sine.Magnitude</param>
+                            <param id="2" name="Upper bound">Tikus.Sine.Magnitude + 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="499893294629298" type="Tikus">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="991448944315973">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="902770180500180" type="System">
+                            <param id="0" name="Value">Tikus.Sine.Value</param>
+                            <param id="1" name="Lower bound">-Tikus.Sine.Magnitude - 1</param>
+                            <param id="2" name="Upper bound">-Tikus.Sine.Magnitude</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="209623824874220" type="Tikus">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="806842273494447">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="173953342725975" type="Player">
+                    <param id="0" name="Object">Tikus</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="685884832888875" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="671373570541844" type="System">
+                    <param id="0" name="Group name">&quot;Stun&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="575659846392411" title="Stun">
+            <sub-events>
+                <variable constant="0" name="StunTimer" sid="161553285731187" static="1" type="number">2</variable>
+                <event-block sid="885330679820209">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="531342566820727" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="906478758022876" type="Player">
+                            <param id="0" name="Max Speed">0</param>
+                        </action>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="475884844456603" type="Player">
+                            <param id="0" name="Jump strength">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="118744967480883" type="Player">
+                            <param id="0" name="Animation">&quot;Stun&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="300042270595162" type="System">
+                            <param id="0" name="Variable">StunTimer</param>
+                            <param id="1" name="Value">Player.dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="268693903963245">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="660181323642772" type="System">
+                            <param id="0" name="Variable">StunTimer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="293735898525397" type="Player">
+                            <param id="0" name="Max Speed">300</param>
+                        </action>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="178491890067306" type="Player">
+                            <param id="0" name="Jump strength">650</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="168427576851318" type="System">
+                            <param id="0" name="Variable">StunTimer</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="725275981257620" type="System">
+                            <param id="0" name="Group name">&quot;Stun&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <comment>Timer</comment>
-        <variable constant="0" name="MAXTIMER" sid="598126970628702" static="0" type="number">20</variable>
+        <variable constant="0" name="MAXTIMER" sid="598126970628702" static="0" type="number">15</variable>
         <variable constant="0" name="timer" sid="964407893158358" static="0" type="number">0</variable>
         <event-block sid="688623442853430">
             <conditions>
@@ -937,8 +1164,91 @@
                     <param id="0" name="Name">&quot;LevelCompleted&quot;</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Play" sid="286884507878430" type="Audio">
+                    <param id="0" name="Audio file">win</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;win&quot;</param>
+                </action>
+            </actions>
             <sub-events>
+                <comment>Animation</comment>
+                <event-block sid="893593327970700">
+                    <conditions />
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="712179718838822" type="LevelEnd">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="218263370501469" type="LevelEnd">
+                            <param id="0" name="Target is">4</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">860</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="241573031082053" type="LevelEnd">
+                            <param id="0" name="Target is">5</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">340</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="906158992315107" type="homebutton">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween2" id="10" name="Start" sid="472435641090515" type="homebutton">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="463720575523024" type="homebutton">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">467</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="276334544994802" type="homebutton">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">568</param>
+                        </action>
+                        <action behavior="LiteTween2" id="3" name="Set target" sid="855707117871320" type="homebutton">
+                            <param id="0" name="Target is">4</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">285</param>
+                        </action>
+                        <action behavior="LiteTween2" id="3" name="Set target" sid="544353702732322" type="homebutton">
+                            <param id="0" name="Target is">5</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">152</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="366080122006003" type="RestartNextButton">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween2" id="10" name="Start" sid="823538189463824" type="RestartNextButton">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="931660226570557" type="RestartNextButton">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">812</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="370474033281752" type="RestartNextButton">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">568</param>
+                        </action>
+                        <action behavior="LiteTween2" id="3" name="Set target" sid="240097828323722" type="RestartNextButton">
+                            <param id="0" name="Target is">4</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">285</param>
+                        </action>
+                        <action behavior="LiteTween2" id="3" name="Set target" sid="611848012041543" type="RestartNextButton">
+                            <param id="0" name="Target is">5</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">152</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="963017248280150">
                     <conditions />
                     <actions>
@@ -978,6 +1288,21 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="579470664820745">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="142180590999846" type="System">
+                            <param id="0" name="Variable">Level_Sekarang</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">int(WebStorage.LocalValue(&quot;unlock&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="267799931062851" type="WebStorage">
+                            <param id="0" name="Key">&quot;unlock&quot;</param>
+                            <param id="1" name="Value">Level_Sekarang+1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="384087548544851">
@@ -986,8 +1311,100 @@
                     <param id="0" name="Name">&quot;LevelFailed&quot;</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Play" sid="873317584532473" type="Audio">
+                    <param id="0" name="Audio file">fail</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;fail&quot;</param>
+                </action>
+            </actions>
             <sub-events>
+                <comment>Animation</comment>
+                <event-block sid="404214580217784">
+                    <conditions />
+                    <actions>
+                        <action behavior="LiteTween" id="10" name="Start" sid="590253035594111" type="LevelEnd">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="932395170326172" type="LevelEnd">
+                            <param id="0" name="Target is">4</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">860</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="785503129325463" type="LevelEnd">
+                            <param id="0" name="Target is">5</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">340</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="995752736284463" type="homebutton">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween2" id="10" name="Start" sid="570489145814294" type="homebutton">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="198752139914212" type="homebutton">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">467</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="235719335555285" type="homebutton">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">568</param>
+                        </action>
+                        <action behavior="LiteTween2" id="3" name="Set target" sid="941559545525005" type="homebutton">
+                            <param id="0" name="Target is">4</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">285</param>
+                        </action>
+                        <action behavior="LiteTween2" id="3" name="Set target" sid="472788660320659" type="homebutton">
+                            <param id="0" name="Target is">5</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">152</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="261735580139996" type="RestartNextButton">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween2" id="10" name="Start" sid="570677957855830" type="RestartNextButton">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="657907222035005" type="RestartNextButton">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">812</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="460186106182460" type="RestartNextButton">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">568</param>
+                        </action>
+                        <action behavior="LiteTween2" id="3" name="Set target" sid="115405178104440" type="RestartNextButton">
+                            <param id="0" name="Target is">4</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">285</param>
+                        </action>
+                        <action behavior="LiteTween2" id="3" name="Set target" sid="490266048630852" type="RestartNextButton">
+                            <param id="0" name="Target is">5</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">152</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="451401644973844" type="Water">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="230068114160140" type="Water">
+                            <param id="0" name="Target is">5</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">700</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="126413650307640">
                     <conditions />
                     <actions>
@@ -1032,6 +1449,7 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="104014164077598" type="System" />
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="118014762776335" type="Function">
@@ -1047,6 +1465,7 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">TotalSampah</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="529762353109658" type="System" />
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="720525629518751" type="Function">
@@ -1064,6 +1483,16 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-12" name="Set group active" sid="938165447850594" type="System">
+                            <param id="0" name="Group name">&quot;Level End&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="959470813304220" type="Audio">
+                            <param id="0" name="Audio file">Button-click-1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="987385021365965" type="Function">
                             <param id="0" name="Name">&quot;Loader-In&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -1096,6 +1525,16 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-12" name="Set group active" sid="277436323422804" type="System">
+                            <param id="0" name="Group name">&quot;Level End&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="996098152497228" type="Audio">
+                            <param id="0" name="Audio file">Button-click-1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="658246561544878" type="Function">
                             <param id="0" name="Name">&quot;Loader-In&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -1128,6 +1567,16 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-12" name="Set group active" sid="649528075877350" type="System">
+                            <param id="0" name="Group name">&quot;Level End&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="327147579189441" type="Audio">
+                            <param id="0" name="Audio file">Button-click-1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="561143962886563" type="Function">
                             <param id="0" name="Name">&quot;Loader-In&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -1241,6 +1690,12 @@
                             <param id="0" name="Name">&quot;Loader-In&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Play" sid="776254535604381" type="Audio">
+                            <param id="0" name="Audio file">Button-click-1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-16" name="Wait" sid="772450427362649" type="System">
                             <param id="0" name="Seconds">1.5</param>
                         </action>
@@ -1268,6 +1723,12 @@
                             <param id="0" name="Name">&quot;Loader-In&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Play" sid="994099689062430" type="Audio">
+                            <param id="0" name="Audio file">Button-click-1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-16" name="Wait" sid="110585829442983" type="System">
                             <param id="0" name="Seconds">1.5</param>
                         </action>
@@ -1287,6 +1748,12 @@
                         <action id="0" name="Call function" sid="810057167536048" type="Function">
                             <param id="0" name="Name">&quot;Unpause&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Play" sid="767962811663243" type="Audio">
+                            <param id="0" name="Audio file">Button-click-1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="796575792385570" type="System">
                             <param id="0" name="Layer">&quot;UI&quot;</param>
@@ -1333,87 +1800,109 @@
             </sub-events>
         </event-group>
         <comment>Rain</comment>
-        <event-block sid="902975587973214">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="328758596270180" type="System" />
-            </conditions>
-            <actions>
-                <action id="-28" name="Set effect parameter" sid="813935275140337" type="JakartaBackground">
-                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                    <param id="1" name="Parameter index">0</param>
-                    <param id="2" name="Value">Self.brightnessValue</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="702294236791807">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="139454341833087" type="System">
-                    <param id="0" name="First value">timer</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">70 / 100 * MAXTIMER</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group description="" sid="754264897263788" title="Rain">
             <sub-events>
-                <event-block sid="431903053520243">
+                <event-block sid="902975587973214">
                     <conditions>
-                        <condition id="-1" name="Every tick" sid="263149689084705" type="System" />
+                        <condition id="-1" name="Every tick" sid="328758596270180" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="246246124189258" type="JakartaBackground">
-                            <param id="0" name="Instance variable">brightnessValue</param>
-                            <param id="1" name="Value">lerp(Self.brightnessValue, 80, 0.05)</param>
+                        <action id="-28" name="Set effect parameter" sid="523504527858493" type="BGinGame">
+                            <param id="0" name="Effect">&quot;Brightness2&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">Self.brightnessValue</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="653380129796553">
+                <event-block sid="437443721890091">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="220774231807917" type="System">
-                            <param id="0" name="Interval (seconds)">1 / LayoutWidth</param>
+                        <condition id="-8" name="Compare two values" sid="642578948588566" type="System">
+                            <param id="0" name="First value">timer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50 / 100 * MAXTIMER</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="694722604626077" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="419003301417709" type="System">
-                            <param id="0" name="Object to create">raindrop</param>
-                            <param id="1" name="Layer">&quot;Layer 0&quot;</param>
-                            <param id="2" name="X">random(-100, LayoutWidth)</param>
-                            <param id="3" name="Y">0</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="330944508800769" type="raindrop">
-                            <param id="0" name="Angle">-240</param>
-                        </action>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="176319186464007" type="raindrop">
-                            <param id="0" name="Speed">int(random(800,1000))</param>
+                        <action id="0" name="Play" sid="261993660334819" type="Audio">
+                            <param id="0" name="Audio file">Rain</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;Rain&quot;</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block any="1" sid="481204436451523">
+                <event-block sid="702294236791807">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="919166878392041" type="raindrop">
-                            <param id="0" name="Object">GroundBawah</param>
-                        </condition>
-                        <condition id="1" name="Is overlapping another object" sid="596656057283228" type="raindrop">
-                            <param id="0" name="Object">GroundAtas</param>
-                        </condition>
-                        <condition id="1" name="Is overlapping another object" sid="835647720787272" type="raindrop">
-                            <param id="0" name="Object">Player</param>
+                        <condition id="-8" name="Compare two values" sid="139454341833087" type="System">
+                            <param id="0" name="First value">timer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">50 / 100 * MAXTIMER</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="729456559474623" type="System">
-                            <param id="0" name="Object to create">Splash</param>
-                            <param id="1" name="Layer">&quot;Layer 0&quot;</param>
-                            <param id="2" name="X">Raindrop.X</param>
-                            <param id="3" name="Y">Raindrop.Y</param>
-                        </action>
-                        <action id="7" name="Set grow rate" sid="996779176739232" type="Splash">
-                            <param id="0" name="Grow rate">random(1, 3)</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="837877255008118" type="raindrop" />
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="431903053520243">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="263149689084705" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="243435485316103" type="BGinGame">
+                                    <param id="0" name="Instance variable">brightnessValue</param>
+                                    <param id="1" name="Value">lerp(Self.brightnessValue, 80, 0.05)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="653380129796553">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="220774231807917" type="System">
+                                    <param id="0" name="Interval (seconds)">1 / LayoutWidth</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="419003301417709" type="System">
+                                    <param id="0" name="Object to create">raindrop</param>
+                                    <param id="1" name="Layer">&quot;Layer 0&quot;</param>
+                                    <param id="2" name="X">random(-100, LayoutWidth)</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="330944508800769" type="raindrop">
+                                    <param id="0" name="Angle">-240</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="176319186464007" type="raindrop">
+                                    <param id="0" name="Speed">int(random(800,1000))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="481204436451523">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="919166878392041" type="raindrop">
+                                    <param id="0" name="Object">GroundBawah</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="596656057283228" type="raindrop">
+                                    <param id="0" name="Object">GroundAtas</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="835647720787272" type="raindrop">
+                                    <param id="0" name="Object">Player</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="729456559474623" type="System">
+                                    <param id="0" name="Object to create">Splash</param>
+                                    <param id="1" name="Layer">&quot;Layer 0&quot;</param>
+                                    <param id="2" name="X">Raindrop.X</param>
+                                    <param id="3" name="Y">Raindrop.Y</param>
+                                </action>
+                                <action id="7" name="Set grow rate" sid="996779176739232" type="Splash">
+                                    <param id="0" name="Grow rate">random(1, 3)</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="837877255008118" type="raindrop" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
         <event-block sid="494563816179598">
             <conditions>
                 <condition id="-15" inverted="1" name="Is group active" sid="518184452446984" type="System">
@@ -1503,7 +1992,30 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="426433480908997">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="563194323272382" type="System">
+                            <param id="0" name="First value">inforintangan.JenisRintangan</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;tikus&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="887029732484531" type="Function">
+                            <param id="0" name="Name">&quot;INFO-IN&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Rintangan&quot;{###}1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="594585229370322">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="787140492484248" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="953200182372641" type="Audio" />
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

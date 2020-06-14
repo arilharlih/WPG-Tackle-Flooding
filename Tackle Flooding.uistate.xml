@@ -11,12 +11,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Splash</layout>
-        <layout order="2">Main_Menu</layout>
-        <layout active="1" order="4">Level_1</layout>
+        <layout active="1" order="2">Main_Menu</layout>
+        <layout order="4">Level_1</layout>
+        <layout order="6">Level_2</layout>
         <event-sheet order="1">Splash</event-sheet>
         <event-sheet order="3">Main_Menu</event-sheet>
         <event-sheet order="5">Level</event-sheet>
-        <event-sheet order="6">Loader</event-sheet>
+        <event-sheet order="7">Loader</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -31,17 +32,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="LevelEndButton" />
         <family expanded="0" name="InfoDesc" />
         <family expanded="0" name="BuangSampah" />
+        <family expanded="0" name="InGameText" />
+        <family expanded="0" name="BGinGame" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/Main Menu/" />
         <folder expanded="0" path="object-folder/Pilih Level/" />
-        <folder expanded="1" path="object-folder/Credit/" />
+        <folder expanded="0" path="object-folder/Credit/" />
         <folder expanded="0" path="object-folder/System/" />
         <folder expanded="1" path="object-folder/Rintangan/" />
         <folder expanded="0" path="object-folder/Splash Screen/" />
         <folder expanded="1" path="object-folder/IN-GAME/" />
-        <folder expanded="1" path="object-folder/IN-GAME/Background/" />
+        <folder expanded="0" path="object-folder/IN-GAME/Background/" />
         <folder expanded="0" path="object-folder/IN-GAME/Ground/" />
         <folder expanded="0" path="object-folder/IN-GAME/UI/" />
         <folder expanded="0" path="object-folder/IN-GAME/Player/" />
@@ -55,16 +58,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Loader/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="0" path="event-folder/" />
-        <folder expanded="1" path="file-folder/" />
-        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="0" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/creditButton/" />
         <folder expanded="1" path="animation-folder/playButton/" />
         <folder expanded="1" path="animation-folder/MainMenuBox/" />
-        <folder expanded="1" path="animation-folder/background/" />
+        <folder expanded="1" path="animation-folder/Logo/" />
         <folder expanded="1" path="animation-folder/level/" />
         <folder expanded="1" path="animation-folder/PilihLevelBox/" />
+        <folder expanded="1" path="animation-folder/CreditBack/" />
+        <folder expanded="1" path="animation-folder/BackgroundCredit/" />
+        <folder expanded="1" path="animation-folder/NameText/" />
         <folder expanded="1" path="animation-folder/gametext/" />
         <folder expanded="1" path="animation-folder/Logo_PENS/" />
         <folder expanded="1" path="animation-folder/splashBG/" />
@@ -78,8 +84,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/LevelEnd/" />
         <folder expanded="1" path="animation-folder/homebutton/" />
         <folder expanded="1" path="animation-folder/RestartNextButton/" />
+        <folder expanded="1" path="animation-folder/Water/" />
         <folder expanded="1" path="animation-folder/Lumpur/" />
         <folder expanded="1" path="animation-folder/inforintangan/" />
+        <folder expanded="1" path="animation-folder/Tikus/" />
         <folder expanded="1" path="animation-folder/PilihSampah/" />
         <folder expanded="1" path="animation-folder/SampahDiKantong/" />
         <folder expanded="1" path="animation-folder/BtnTempatSampah/" />

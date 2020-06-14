@@ -108,8 +108,8 @@
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0.8</fade-in-time>
                                 <wait-time>1.5</wait-time>
-                                <fade-out-time>0</fade-out-time>
-                                <destroy>No</destroy>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>

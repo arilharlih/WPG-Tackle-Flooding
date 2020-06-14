@@ -32,23 +32,21 @@
                 <instance type="background" uid="38">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <hotspot>Center</hotspot>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>640</x>
-                        <y>360</y>
+                        <x>589</x>
+                        <y>377</y>
                         <z>0</z>
-                        <width>1280</width>
-                        <height>720</height>
+                        <width>1920</width>
+                        <height>1062</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.800000012</opacity>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
@@ -70,28 +68,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="MainMenuBox" uid="66">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>640</x>
-                        <y>360</y>
-                        <z>0</z>
-                        <width>1280</width>
-                        <height>720</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="playButton" uid="0">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -122,14 +98,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>393</x>
-                        <y>539</y>
+                        <x>311</x>
+                        <y>618</y>
                         <z>0</z>
                         <width>0</width>
                         <height>0</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.498316497</hotspotX>
+                        <hotspotY>0.568253994</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -164,14 +140,49 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>856</x>
-                        <y>540</y>
+                        <x>930</x>
+                        <y>609</y>
                         <z>0</z>
                         <width>0</width>
                         <height>0</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.501547992</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Logo" uid="61">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Size</tweened-property>
+                                <function>EaseOutBounce</function>
+                                <target>100,100</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>1.2</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>640</x>
+                        <y>171</y>
+                        <z>0</z>
+                        <width>0</width>
+                        <height>0</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500650167</hotspotX>
+                        <hotspotY>0.501369834</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -184,8 +195,8 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>1</x>
-                <y>1</y>
+                <x>0</x>
+                <y>0</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>
@@ -226,6 +237,7 @@
                     </properties>
                     <instance-variables>
                         <level_id>1</level_id>
+                        <timer>150</timer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LiteTween">
@@ -250,14 +262,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>335</x>
-                        <y>345</y>
+                        <x>360</x>
+                        <y>360</y>
                         <z>0</z>
                         <width>0</width>
                         <height>0</height>
                         <depth>0</depth>
-                        <hotspotX>0.501831532</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.50052911</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -271,6 +283,7 @@
                     </properties>
                     <instance-variables>
                         <level_id>2</level_id>
+                        <timer>360</timer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LiteTween">
@@ -295,59 +308,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>661</x>
-                        <y>348</y>
+                        <x>960</x>
+                        <y>360</y>
                         <z>0</z>
                         <width>0</width>
                         <height>0</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="level" uid="70">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>3</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <level_id>3</level_id>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="LiteTween">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <tweened-property>Size</tweened-property>
-                                <function>EaseOutBounce</function>
-                                <target>100,100</target>
-                                <target-mode>Absolute</target-mode>
-                                <duration>1</duration>
-                                <enforce-mode>Enforce</enforce-mode>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="Brightness">
-                            <parameters>
-                                <brightness>1</brightness>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>958</x>
-                        <y>352</y>
-                        <z>0</z>
-                        <width>0</width>
-                        <height>0</height>
-                        <depth>0</depth>
-                        <hotspotX>0.501831532</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.50052911</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -370,7 +338,120 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="BackgroundCredit" uid="64">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Height</tweened-property>
+                                <function>EaseOutQuart</function>
+                                <target>100,100</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>1.2</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>640</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>1280</width>
+                        <height>0</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NameText" uid="63">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Opacity</tweened-property>
+                                <function>Linear</function>
+                                <target>100,100</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0.8</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>429</x>
+                        <y>336</y>
+                        <z>0</z>
+                        <width>787.836364746</width>
+                        <height>549.639465332</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500377953</hotspotX>
+                        <hotspotY>0.500541687</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="CreditBack" uid="65">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Opacity</tweened-property>
+                                <function>Linear</function>
+                                <target>100,100</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0.8</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Brightness">
+                            <parameters>
+                                <brightness>1</brightness>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1115</x>
+                        <y>624</y>
+                        <z>0</z>
+                        <width>240.818191528</width>
+                        <height>129.130615234</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500540555</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="Loader" sid="459670714655739">
